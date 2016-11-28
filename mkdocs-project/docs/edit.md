@@ -1,4 +1,4 @@
-# Learn MkDocs / Edit
+# Learn MkDocs / Edit Content
 
 Website content can be created after installing the software and initializing a new MkDocs project.
 
