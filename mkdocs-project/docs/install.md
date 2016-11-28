@@ -199,6 +199,16 @@ mkdocs --version
 mkdocs, version 0.15.3
 ```
 
+## Update MkDocs
+
+[MkDocs release notes](http://www.mkdocs.org/about/release-notes/) can be consulted to determine whether to update MkDocs.
+
+New versions of MkDocs software can be installed by running the following
+
+```sh
+$ pip install --upgrade mkdocs
+```
+
 ## Next Steps
 
 After installing the software, the next step is to create a new MkDocs project to organize documentation files.
