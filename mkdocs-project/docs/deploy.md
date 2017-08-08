@@ -1,7 +1,7 @@
 # Learn MkDocs / Deploy Website
 
 The `site/` folder in the MkDocs project will be populated with static website content by running `mkdocs build`.
-Once the files are created, they can be deployed to a location where a web server can publish the files.
+Once the files are created, they can be deployed to a location where a web server can publish the files for viewing.
 
 ## Deploy to Amazon S3
 
@@ -9,12 +9,15 @@ One way to serve the static website files is to copy the files to an
 [Amazon S3 static website bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 The following script illustrates how to copy the files to Amazon S3 using the Amazon command line interface tools,
-in this case using a `Linux` bash script, and a provided Amazon web services profile via script command parameter.
-The script is in this case named copyToOwfAmazonS3.sh and is located in the `build-util` folder in the repository.
+in this case using a Linux `sh` script that expects to be provided with an Amazon web services profile name via script command parameter.
+The script is in this case named `copyToOwfAmazonS3.sh` and is located in the `build-util` folder in the repository.
+The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
+The `site` folder is renamed to `owf-learn-mkdocs` during the upload.
+The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
 
 
-```
-#!/bin/bash
+```sh
+#!/bin/sh
 #
 # Copy the site/* contents to the learn.openwaterfoundation.org website
 # - replace all the files on the web with local files

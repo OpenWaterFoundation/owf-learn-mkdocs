@@ -1,29 +1,73 @@
-# Learn MkDocs / Edit Content
+# Learn MkDocs / Edit Content #
 
-Website content can be created after installing the software and initializing a new MkDocs project.
+Website content pages are created/edited with a text editor.
+Each markdown file that is created should be included in the `mkdocs.yml` configuration file so that the MkDocs
+software can process from Markdown into final form.
 
 The MkDocs documentation is straightforward and provides examples of content.
-See the following resources to help with formatting content:
+See the following MkDocs and Markdown resources to help with formatting content:
 
 * [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
 * [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-This documentation contains the following sections:
+This page contains the following sections:
 
 * [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
+	+ [Installing Third-Party MkDocs Theme](#installing-third-party-mkdocs-theme)
 * [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content)
-* [MkDocs Examples](#mkdocs-examples) - useful examples and tips
+	+ [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
+* [Selecting File Naming Convention](#selecting-file-naming-convention)
+* [Selecting Markdown Documentation Styles](#selecting-documentation-styles)
+* [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
+	+ [Link to  a Markdown file in the same or different folder](#link-to-a-markdown-file-in-the-same-or-different-folder)
+	+ [Link to a heading in Markdown file](#link-to-a-heading-in-markdown-file)
+	+ [Link to a named location that is not a section heading](#link-to-a-named-location-that-is-not-a-section-heading)
+	+ [Include language indicator for more specific formatting](#include-language-indicator-for-more-specific-formatting)
 
-## Selecting a Theme
+## Selecting a Theme ##
+
+The `mkdocs.yml` file allows a theme to be specified, which controls the look and feel of the website:
+
+```yaml
+theme: readthedocs
+```
+
+Changing the theme involves installing the theme files and changing the configuration file.
 
 Experience has shown the following:
 
-* Trying different themes is helpful but having many documents can overwhelm some of the themes.
-The "Read the Docs" theme seems to handle many documents.
-* Use a multi-level layout for documents when the number of documents starts to grow.
-Otherwise readers may not follow the content organization.
+* The default themes shipped with MkDocs (`readthedocs` and `mkdocs`) are generally adequate but have limitations,
+especially for larger sites.
+* Sites having many documents can cause the left navigation bar to get very long, for example in `readthedocs` theme.
+* A menu-based theme with many menus can cause the page header to overwrite the top of pages - it is
+typically necessary in this case to limit the number of menus or words in menus in order to fit the maximum
+page width.
+* Some themes provide search features and some do not.  If a search feature is desirable then make sure to check the theme.
 
-## Starting Local Web Server to Review Content
+Overcoming these issues requires experimenting with themes and perhaps adding custom CSS configuration.
+It may also be desirable to customize the branding of documentation, which involves adding favicon and editing the CSS.
+
+### Installing Third-Party MkDocs Theme ###
+
+If it is desired to use a MkDocs theme other than those distributed with MkDocs, first review available themes, for example:
+
+* [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
+
+If a theme is desired, follow the link for the theme on the above page and follow installation instructions, for example:
+
+* [MkDocs Bootstrap Theme](http://mkdocs.github.io/mkdocs-bootstrap/)
+
+```sh
+pip install mkdocs-bootstrap
+
+pip install mkdocs-bootswatch
+```
+Note that in some cases the theme will already have been installed and `pip` will indicate that update can be used.
+
+Then change the `mkdocs.yml` file to indicate the new theme and restart MkDocs.
+
+## Starting Local Web Server to Review Content ##
 
 The MkDocs software converts the Markdown files into a static website that uses HTML, CSS, JavaScript, images, and other files.
 The conversion of Markdown files to static website content takes place in two ways:
@@ -31,49 +75,95 @@ The conversion of Markdown files to static website content takes place in two wa
 1. In memory when a local MkDocs web server is run  with `mkdocs serve` (no output files are generated).
 2. As files when `mkdocs build` is run.
 
-During normal editing, content can be viewed by opening a terminal window and starting the server, for example on Linux:
+During normal editing, content can be viewed by opening a terminal window and starting the local web server,
+for example on Linux (comments are provided for explanation):
 
-```
+```sh
+# Must be run in folder containing mkdocs.yml
 $ cd mkdocs-project
-# Takes over window
-$ mdocs serve
-# Run in background
-$ mdocs serve&
+# Takes over window...
+$ mkdocs serve
+# Or, run in background...
+$ mkdocs serve&
 ```
 
-Then view the website by opening the following link in a web browser:  `http://localhost:8000`
-
-To kill the server, enter Ctrl-C in the terminal.  Only one MkDocs server can run at the same time.
+Then view the website by opening the following link in a web browser:  `http://localhost:8000`.
 
 The MkDocs server will scan for changed files and will regenerate the website content.
-The web browser will automatically refresh but it may be necessary to manually refresh the page.
+The web browser will automatically refresh but in some cases it may be necessary to manually refresh the page.
 
-## MkDocs Examples
+The server will not refresh content if, for example, a new entry has been made in the `mkdocs.yml` file
+but the referenced file does not yet exist.
+In this case, create a basic file so that the server is not impacted by a missing file.
 
-### Link to  a Markdown file in the same folder (does not seems to require file extension):
+### Stopping MkDocs Web Server ###
+
+To kill the MkDocs web server, enter `Ctrl-C` in the command shell.  Only one MkDocs server can run at the same time for a port number.
+
+## Selecting File Naming Convention ##
+
+The Markdown files should follow a naming convention that facilitates maintaining the content,
+for example:
+
+* Use consistent convention such as all lowercase with dashes separating words.
+* If images are used, create a folder such as `pagename-images`, where `pagename` is the name of the content page and
+the indicated folder is the images for that page.
+
+It is possible that other documentation will link to a page so some care should be taken not to frequently change filenames.
+
+## Selecting Markdown Documentation Styles ##
+
+One of the benefits of using Markdown, MkDocs, and MkDocs theme is that styles are defaulted.
+For example, using the headings will result in a font style.
+However, there is still a need to decide how Markdown will be applied to format a document.
+It is possible to customize the MkDocs theme that is used to control such styles.
+Another styling approach is to decide how to use basic Markdown to format documentation.
+For example, the following may be selected as a convention for styling:
+
+* Indicate all user input with triple-backticks using appropriate content type.
+* Indicate all inline text program names with surrounding single-backticks.
+* Use italic bold (three surrounding asterisks) for software labels/features such as buttons to click.
+
+Other choices can be made to ensure consistency in the documentation.
+
+## MkDocs Markdown Examples ##
+
+The following are useful examples and tips determined through use of MkDocs.
+
+### Link to a Markdown file in the same or different folder ###
+
+A Markdown file can be linked to in the same folder by using the link notation.
+In this case the name of the markdown file without `.md` is specified in parentheses.
 
 ```text
 [text for visible link](other-markdown-file)
-
 ```
 
-### Link to a heading in Markdown file in a different folder
+If the file exists in a different folder, specify a leading path:
+
+```text
+[text for visible link](../some-folder/other-markdown-file)
+```
+
+### Link to a heading in Markdown file ###
 
 Use the following syntax to link to a heading in a separate file, where the words in parenthesis match the
 `#` heading.  This is useful for creating internal table of contents to help with navigation.
 The following are rules for specifying the reference location in parentheses:
 
 * Start the location name with a `#`.
-* Replaces spaces by dash.
+* Replace spaces by dash.
 * Remove periods and some other special characters as necessary to make the link work.
-* Use all lowercase in the reference name.
+* Use all lowercase in the location name.
 
 ```text
 [text for visible link](../parallel-folder/other-markdown-file#heading-words)
 
 ```
 
-### Link to a named location that is not a section heading
+If the link is to a location in the current file, omit the leading filename and start the reference with `#`.
+
+### Link to a named location that is not a section heading ###
 
 It can be useful to include a link to a point within a Markdown file without referring to a heading.
 To do so, add the following to create a named location:
@@ -88,15 +178,16 @@ Then add a link to the named location similar to the following:
 Press "back" in the browser to return to the list of setup steps or [click here](#step1)`
 ```
 
-### Include language indicator for more specific formatting:
+### Include language indicator for more specific formatting ###
 
-``````
+It is useful to automatically format content based on the language for the content.
+For example, the following uses notation <code>```sh</code> to indicate that the content is for a Linux shell script:
+
 ```sh
 # Some script
 cd someDir
 ls -la
 ```
-``````
 
 The following provides a list of languages supported by Markdown, although support will vary by tool:
 

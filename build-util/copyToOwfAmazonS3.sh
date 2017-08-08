@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Copy the site/* contents to the learn.openwaterfoundation.org website
 # - replace all the files on the web with local files

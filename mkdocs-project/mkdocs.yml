@@ -2,15 +2,26 @@
 # Use hash-comments to comment out pages have not been written
 # Reference: http://www.mkdocs.org/user-guide/configuration/
 #
-site_name: OWF Learn / MkDocs
+site_name: Learn / MkDocs
 pages:
 - Home: index.md
 - Overview: overview.md
-- Install MkDocs: install.md
-- New MkDocs Project: new-project.md
-- Edit Content: edit.md
-- Deploy Website: deploy.md
-theme: readthedocs
+#- Install MkDocs: install.md
+- Install: install.md
+- New Project: new-project.md
+#- Edit Content: edit.md
+- Edit: edit.md
+#- Deploy Website: deploy.md
+- Deploy: deploy.md
+#- Use Site: use-site.md
+- Use: use-site.md
+# Default "readthedocs" theme distributed with MkDocs
+#theme: readthedocs
+# See installation instructions for bootstrap theme:  http://mkdocs.github.io/mkdocs-bootstrap/
+# - bootstrap has no search feature
+theme: bootstrap
+# See installation instructions for bootswatch theme:  http://mkdocs.github.io/mkdocs-bootswatch/
+theme: cosmo
 repo_url:  https://github.com/OpenWaterFoundation/owf-learn-mkdocs
 site_description:  Open Water Foundation Learn MkDocs
 site_author:  Open Water Foundation

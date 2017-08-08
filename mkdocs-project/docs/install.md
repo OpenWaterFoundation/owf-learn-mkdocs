@@ -45,7 +45,7 @@ This is generally OK.
 
 If `pip` is not installed, install it.
 Even though pip should already be included with Python on Cygwin, it may not actually have been installed
-(see [Stack Overflow article "Installing new versions of Pytnon on Cygwin does not install Pip?"](http://stackoverflow.com/questions/30863501/installing-new-versions-of-python-on-cygwin-does-not-install-pip).
+(see [Stack Overflow article "Installing new versions of Pytnon on Cygwin does not install Pip?"](http://stackoverflow.com/questions/30863501/installing-new-versions-of-python-on-cygwin-does-not-install-pip)).
 Following the instructions from the above link to install pip on Cygwin:
 
 ```bash
