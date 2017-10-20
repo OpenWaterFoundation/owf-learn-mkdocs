@@ -4,6 +4,8 @@ This repository contains the Open Water Foundation MkDocs training materials,
 which provide guidance for implementing MkDocs projects for software and other documentation.
 The documentation is written for the layperson in order to encourage use of MkDocs.
 
+See the deployed [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/) documentation.
+
 ## Repository Contents ##
 
 The repository contains the following:
