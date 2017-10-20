@@ -10,6 +10,15 @@ dryrun=""
 #dryrun="--dryrun"
 s3Folder="s3://learn.openwaterfoundation.org/owf-learn-mkdocs"
 
+# Make sure that this is being run from the build-util folder
+pwd=`pwd`
+dirname=`basename ${pwd}`
+if [ ! ${dirname} = "build-util" ]
+        then
+        echo "Must run from build-util folder"
+        exit 1
+fi
+
 if [ "$1" == "" ]
 	then
 	echo ""

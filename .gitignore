@@ -6,6 +6,10 @@
 *.swp
 *.swo
 
+# Ignore the dynamic MkDocs site folder
+#
+mkdocs-project/site/
+
 # Office temporary files
 
 *.tmp
