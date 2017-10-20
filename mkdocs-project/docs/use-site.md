@@ -3,11 +3,14 @@
 Once the website is deployed, features will be available based on the
 [theme that is used](edit#selecting-a-theme).
 
-This page contains the following sections:
+The remainder of this page contains the following sections:
 
 * [Searching the Site](#searching-the-site)
 * [Printing a Page](#printing-a-page)
 * [Save a Page to a File](#save-a-page-to-a-file)
+* [Share Documentation](#share-documentation)
+
+-----------------
 
 ## Searching the Site ##
 
@@ -37,3 +40,12 @@ The following sections describe how to save the file using common browsers.
 2. Select ***Change...*** to change the printer.
 3. Select ***Save as PDF*** from the printer names.
 4. Prese the ***Save*** button and enter a filename for the PDF.
+
+## Share Documentation ##
+
+One of the benefits of publishing static documentation websites is that sharing the documentation
+involves sharing the URL link to the website.
+Therefore, visit the documentation page online, copy the browser link into an email, text, tweet, or other communication,
+and share the documentation.
+
+More skilled collaborators can contribute to the documentation via the [GitHub project](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).

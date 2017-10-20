@@ -13,6 +13,8 @@ as a supporting utility language for scripting.  Python is available on common o
 * [Install on Linux](#install-on-linux)
 * [Install on Windows](#install-on-windows)
 
+-------
+
 ## Install on Cygwin
 
 The following instructions describe how to install MkDocs on Cygwin for Python 2 (`python`).
@@ -88,6 +90,9 @@ The following instructions describe how to install MkDocs on Linux, in this case
 although other Linux distributions would be similar.
 MkDocs has been verified to work with Python2 but Python3 had an issue.
 Therefore the following focuses on Python2.
+
+***Follow IT system conventions.
+It may be appropriate to install as root for all users (by using `sudo` or as a specific user.***
 
 ### Install Python
 

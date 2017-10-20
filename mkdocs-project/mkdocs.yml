@@ -7,27 +7,35 @@ pages:
 - Home: index.md
 - Overview: overview.md
 #- Install MkDocs: install.md
-- Install: install.md
+- Install MkDocs: install.md
 - New Project: new-project.md
-#- Edit Content: edit.md
-- Edit: edit.md
-#- Deploy Website: deploy.md
-- Deploy: deploy.md
-#- Use Site: use-site.md
-- Use: use-site.md
+- Edit Content: edit.md
+- Deploy Website: deploy.md
+- Use Site: use-site.md
+- Resources: resources.md
+# ------- configuration properties ---------------
+# Use Material theme
+# - installation notes:  https://github.com/squidfunk/mkdocs-material
+theme: material
 # Default "readthedocs" theme distributed with MkDocs
 #theme: readthedocs
 # See installation instructions for bootstrap theme:  http://mkdocs.github.io/mkdocs-bootstrap/
 # - bootstrap has no search feature
-theme: bootstrap
+#theme: bootstrap
 # See installation instructions for bootswatch theme:  http://mkdocs.github.io/mkdocs-bootswatch/
-theme: cosmo
-repo_url:  https://github.com/OpenWaterFoundation/owf-learn-mkdocs
+#theme: cosmo
+# Don't indicate the repo because Edit will be shown on every page (don't want that in deployed mode)
+# - Also see edit_uri if repo_url is specified
+#repo_url:  https://github.com/OpenWaterFoundation/owf-learn-mkdocs
 site_description:  Open Water Foundation Learn MkDocs
 site_author:  Open Water Foundation
-site_favicon:  OWF-Logo-Favicon-32x32.png
+site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
 copyright:  Copyright Open Water Foundation
-#extra_css:
-#- css/extra.css
-# Defaults to all JavaScript in the docs folder
-# extra_javascript:
+# Extra options
+extra:
+  # Use extra CSS to customize styles, based on theme
+  extra_css: 'css/extra-material-theme.css'
+  # extra_javascript:
+  # OWF logo
+  # - does not look that good so comment out for now
+    #logo:   'images/OWF-Logo-Color.png'
