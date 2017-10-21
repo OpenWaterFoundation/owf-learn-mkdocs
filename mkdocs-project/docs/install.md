@@ -12,14 +12,16 @@ as a supporting utility language for scripting.  Python is available on common o
 * [Install on Cygwin](#install-on-cygwin)
 * [Install on Linux](#install-on-linux)
 * [Install on Windows](#install-on-windows)
+* [Install a Third-Party MkDocs Theme](#install-a-third-party-mkdocs-theme)
+* [Update MkDocs](#update-mkdocs)
 
 -------
 
-## Install on Cygwin
+## Install on Cygwin ##
 
 The following instructions describe how to install MkDocs on Cygwin for Python 2 (`python`).
 
-### Install Python
+### Install Python ###
 
 Check to see if Python is installed on the system (`python3` would be used for Python3):
 
@@ -33,7 +35,7 @@ Python 2.7.10
 
 If Python is not installed, install Python using the Cygwin installation tool.
 
-### Install pip
+### Install pip ###
 
 MkDocs requires the `pip` Python module installation tool to be installed.  Check whether `pip` is installed:
 
@@ -59,7 +61,7 @@ Installing collected packages: setuptools, pip
 Successfully installed pip-6.1.1 setuptools-15.2
 ```
 
-### Install MkDocs
+### Install MkDocs ###
 
 MkDocs is installed as a Python module.  First check whether MkDocs is installed:
 
@@ -84,7 +86,7 @@ mkdocs, version 0.15.3
 
 ```
 
-## Install on Linux
+## Install on Linux ##
 
 The following instructions describe how to install MkDocs on Linux, in this case Debian Wheezy,
 although other Linux distributions would be similar.
@@ -113,7 +115,7 @@ If necessary, install Python:
 $ sudo apt-get install python
 ```
 
-### Install pip
+### Install pip ###
 
 MkDocs requires that `pip` Python module installation tool to be installed.  Check whether `pip` is installed:
 
@@ -128,7 +130,7 @@ If `pip` is not installed, install it:
 $ sudo apt-get install python-pip
 ```
 
-### Install MkDocs
+### Install MkDocs ###
 
 MkDocs is installed as a Python module.  First check whether MkDocs is installed:
 
@@ -147,12 +149,12 @@ $ mkdocs --version
 mkdocs, version 0.15.3
 ```
 
-## Install on Windows
+## Install on Windows ##
 
 The following instructions describe how to install MkDocs on Windows 7 & 10.
 The following focuses on Python 3.
 
-### Install Python
+### Install Python ###
 
 Check to see if Python is installed on the system.
 
@@ -184,7 +186,7 @@ If `pip` is not installed, install it:
 python -m pip install -U pip
 ```
 
-### Install MkDocs
+### Install MkDocs ###
 
 MkDocs is installed as a Python module.  First check whether MkDocs is installed:
 
@@ -204,16 +206,33 @@ mkdocs --version
 mkdocs, version 0.15.3
 ```
 
-## Update MkDocs
+## Install a Third-Party MkDocs Theme ##
+
+It may be necessary or desirable to use a third-party MkDocs theme to enable an improved look and feel and functionality.
+This decision may not be obvious until after content has been added to the documentation.
+The following are links to themes:
+
+* [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* [Material Theme](http://squidfunk.github.io/mkdocs-material/)
+* [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
+
+To use a third-party theme, follow the link for the theme on the above page and follow installation instructions.
+Note that in some cases the theme will already have been installed and `pip` will indicate that update can be used.
+
+After installing the theme, change the `theme` configuration property in the `mkdocs.yml` file to indicate the new theme.
+It may be necessary to and restart MkDocs (see [Edit Content section](edit)).
+
+## Update MkDocs ##
 
 [MkDocs release notes](http://www.mkdocs.org/about/release-notes/) can be consulted to determine whether to update MkDocs.
 
 New versions of MkDocs software can be installed by running the following
+(may need to additionally use `--user` if Python modules have been installed in user files):
 
 ```sh
 $ pip install --upgrade mkdocs
 ```
 
-## Next Steps
+## Next Steps ##
 
 After installing the software, the next step is to create a new MkDocs project to organize documentation files.

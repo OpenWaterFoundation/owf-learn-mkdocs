@@ -44,6 +44,7 @@ Steve Malers, Open Water Foundation (@smalers)
 The following release nodes indicate the update history for documentation, with GitHub repository issue indicated,
 if applicable.
 
-* 2017-10-20 [#1] - switch to Material theme, update documentation based on experience.
+* 2017-10-21 [2](issues/2) - cleanup theme documentation.
+* 2017-10-20 [1](issues/1) - switch to Material theme, update documentation based on experience.
 * 2017-08-07 - switch to Cosmo theme, update documentation based on experience.
 

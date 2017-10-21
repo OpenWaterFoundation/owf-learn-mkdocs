@@ -13,6 +13,8 @@ The following are useful resources.
 	+ [Getting Started](http://squidfunk.github.io/mkdocs-material/getting-started/) - also contains useful MkDocs general information
 	+ [Material Design](https://material.io) - user interface components that go beyond MkDocs
 	+ [Material icons](https://material.io/icons/) - modern and clean icons
+* [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
 
 ## Markdown ##
 
