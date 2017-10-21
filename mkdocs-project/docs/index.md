@@ -40,5 +40,4 @@ The source files for this documentation are maintained in a GitHub repository:  
 ## Release Notes ##
 
 This documentation was last updated 2017-10-21.
-See the [Release Notes in the GitHub Project](https://github.com/OpenWaterFoundation/owf-learn-mkdocs#release-notes)
-
+See the [Release Notes in the GitHub Project](https://github.com/OpenWaterFoundation/owf-learn-mkdocs#release-notes).
