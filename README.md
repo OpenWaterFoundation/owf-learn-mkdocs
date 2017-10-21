@@ -22,6 +22,12 @@ mkdocs-project/       (Typicaly MkDocs project for this documentation)
 
 ```
 
+## Development Environment ##
+
+The development environment for contributing to this project requires installation of Python, MkDocs, and Material MkDocs theme.
+Python 2 has been used for development.  See the [`mkdocs-project/docs/install.md`](mkdocs-project/docs/install.md)
+file for information about installing these tools.
+
 ## License ##
 
 The OWF Learn MkDocs website content and examples are licenses under the
@@ -50,4 +56,3 @@ if applicable (links to issues via README.md are not cleanly supported by GitHub
 * 2017-10-21 [2] - cleanup theme documentation.
 * 2017-10-20 [1] - switch to Material theme, update documentation based on experience.
 * 2017-08-07 - switch to Cosmo theme, update documentation based on experience.
-
