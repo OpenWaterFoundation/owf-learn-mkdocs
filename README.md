@@ -16,6 +16,9 @@ The repository contains the following:
 README.md             (This file)
 build-util/           (Useful scripts for view, building, deploying documentation)
 mkdocs-project/       (Typicaly MkDocs project for this documentation)
+  mkdocs.yml          (MkDocs configuration file for website)
+  docs/               (Folder containing source Markdown and other files for website)
+  site/               (Folder created by MkDocs containing the static website)
 
 ```
 
@@ -42,9 +45,9 @@ Steve Malers, Open Water Foundation (@smalers)
 ## Release Notes ##
 
 The following release nodes indicate the update history for documentation, with GitHub repository issue indicated,
-if applicable.
+if applicable (links to issues via README.md are not cleanly supported by GitHub so have to go to the issues page to find).
 
-* 2017-10-21 [2](issues/2) - cleanup theme documentation.
-* 2017-10-20 [1](issues/1) - switch to Material theme, update documentation based on experience.
+* 2017-10-21 [2] - cleanup theme documentation.
+* 2017-10-20 [1] - switch to Material theme, update documentation based on experience.
 * 2017-08-07 - switch to Cosmo theme, update documentation based on experience.
 
