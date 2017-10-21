@@ -17,11 +17,10 @@ For example, [view the source files for this documentation on GitHub](https://gi
 The remainder of this page contains the following sections:
 
 * [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
-	+ [Installing Third-Party MkDocs Theme](#installing-third-party-mkdocs-theme)
-* [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content)
+* [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content) - shows website in browser
 	+ [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
-* [Selecting File Naming Convention](#selecting-file-naming-convention)
-* [Selecting Markdown Documentation Styles](#selecting-markdown-documentation-styles)
+* [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
+* [Selecting Markdown Documentation Styles](#selecting-markdown-documentation-styles) - conventions within the pages
 * [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
 	+ [Link to  a Markdown file in the same or different folder](#link-to-a-markdown-file-in-the-same-or-different-folder)
 	+ [Link to a heading in Markdown file](#link-to-a-heading-in-markdown-file)
@@ -32,7 +31,10 @@ The remainder of this page contains the following sections:
 
 ## Selecting a Theme ##
 
-The `mkdocs.yml` file allows a theme to be specified, which controls the look and feel of the website:
+The `mkdocs.yml` file allows a theme to be specified, which controls the look and feel of the website,
+including menu features, whether search is enabled, and cascading style sheet (CSS) defaults for fonts, colors, etc.
+For example, the following uses one of the default themes distributed with MkDocs
+(see also the [Read the Docs website](https://readthedocs.org/), which is a public location for documents).
 
 ```yaml
 theme: readthedocs
@@ -46,29 +48,22 @@ Experience has shown the following:
 especially for larger sites.
 In particular, the navigation features are limited.
 * Sites having many documents can cause the left navigation bar to get very long, for example in `readthedocs` theme.
-* A menu-based theme with many menus can cause the page header to overflow and overwrite the top of pages - it is
-typically necessary in this case to limit the number of menus or words in menus in order to fit the maximum
-page width.
-* Some themes provide search features and some do not.  If a search feature is desirable then make sure to check the theme.
+* A menu-based theme with many menus at the top of the page can cause the page header to overflow and overwrite the top of pages.
+It is necessary in this case to limit the number of menus or words in menus in order to fit the maximum page width.
+* Some themes provide search features and some do not.  If a search feature is desirable then make sure to
+confirm that the theme includes this functionality.
 
 Overcoming these issues requires experimenting with themes and perhaps adding custom CSS configuration.
 It may also be desirable to customize the branding of documentation, which involves adding favicon and editing the CSS.
 
 ***Based on experimentation, the Material theme has been selected for this and other documentation.***
-The Material theme provides search features, navigation for the entire site (left navigation panel) and
-navigation within a page (right navigation panel).
+The Material theme provides search features, navigation for the entire site (left navigation panel),
+navigation within a page (right navigation panel), and is also mobile-friendly
+([responsive](https://en.wikipedia.org/wiki/Responsive_web_design)).
 This documentation uses the Material theme.
 
-### Installing Third-Party MkDocs Theme ###
-
-If it is desired to use a MkDocs theme other than those distributed with MkDocs, first review available themes, for example:
-
-* [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-* [Material Theme](http://squidfunk.github.io/mkdocs-material/)
-* [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
-
-To use a third-party theme, follow the link for the theme on the above page and follow installation instructions.
-Note that in some cases the theme will already have been installed and `pip` will indicate that update can be used.
+To use a third-party theme, review the features of a theme and follow installation instructions.
+[See the Install MkDocs section](install) for more information.
 
 After installing the theme, change the `theme` configuration property in the `mkdocs.yml` file to indicate the new theme.
 It may be necessary to and restart MkDocs (see next section).
