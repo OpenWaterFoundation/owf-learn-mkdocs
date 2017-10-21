@@ -18,7 +18,7 @@ build-util/           (Useful scripts for view, building, deploying documentatio
 mkdocs-project/       (Typicaly MkDocs project for this documentation)
   mkdocs.yml          (MkDocs configuration file for website)
   docs/               (Folder containing source Markdown and other files for website)
-  site/               (Folder created by MkDocs containing the static website)
+  site/               (Folder created by MkDocs containing the static website - ignored using .gitignore)
 
 ```
 
