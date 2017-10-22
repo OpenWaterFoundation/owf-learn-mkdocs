@@ -12,8 +12,8 @@ The repository contains the following:
 
 ```text
 .github/              (Files specific to GitHub such as issue template)
-.gitattributes        (Typicaly Git configuration file)
-.gitignore            (Typicaly Git configuration file)
+.gitattributes        (Typical Git configuration file)
+.gitignore            (Typical Git configuration file)
 README.md             (This file)
 build-util/           (Useful scripts to view, build, and deploy documentation)
 mkdocs-project/       (Typical MkDocs project for this documentation)
@@ -43,7 +43,7 @@ Contribute to the documentation as follows:
 
 ## Maintainers ##
 
-This repository is maintained by the Open Water Foundation.
+This repository is maintained by the [Open Water Foundation](http://openwaterfoundation.org/).
 
 ## Contributors ##
 
