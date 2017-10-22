@@ -29,6 +29,14 @@ The development environment for contributing to this project requires installati
 Python 2 has been used for development.  See the [`mkdocs-project/docs/install.md`](mkdocs-project/docs/install.md)
 file for information about installing these tools.
 
+## Editing and Viewing Content ##
+
+If the development environment is properly configured, edit and view content as follows:
+
+1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
+2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Linux) or equivalent.
+3. View content in a web browser using URL `http://localhost:8000`.
+
 ## License ##
 
 The OWF Learn MkDocs website content and examples are licensed under the
