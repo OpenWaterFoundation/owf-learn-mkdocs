@@ -11,15 +11,15 @@ See the deployed [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-l
 The repository contains the following:
 
 ```text
-.github/              (Files specific to GitHub such as issue template)
-.gitattributes        (Typical Git configuration file)
-.gitignore            (Typical Git configuration file)
-README.md             (This file)
-build-util/           (Useful scripts to view, build, and deploy documentation)
-mkdocs-project/       (Typical MkDocs project for this documentation)
-  mkdocs.yml          (MkDocs configuration file for website)
-  docs/               (Folder containing source Markdown and other files for website)
-  site/               (Folder created by MkDocs containing the static website - ignored using .gitignore)
+.github/              Files specific to GitHub such as issue template.
+.gitattributes        Typical Git configuration file.
+.gitignore            Typical Git configuration file.
+README.md             This file.
+build-util/           Useful scripts to view, build, and deploy documentation.
+mkdocs-project/       Typical MkDocs project for this documentation.
+  mkdocs.yml          MkDocs configuration file for website.
+  docs/               Folder containing source Markdown and other files for website.
+  site/               Folder created by MkDocs containing the static website - ignored using .gitignore.
 
 ```
 
@@ -62,6 +62,7 @@ Steve Malers, Open Water Foundation (@smalers)
 The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
 if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
 
+* 2017-11-29 [6] - add examples for formatting Markdown literally and controlling table column width
 * 2017-10-21 [2,3,4] - cleanup theme documentation, add issue template.
 * 2017-10-20 [1] - switch to Material theme, update documentation based on experience.
 * 2017-08-07 - switch to Cosmo theme, update documentation based on experience.

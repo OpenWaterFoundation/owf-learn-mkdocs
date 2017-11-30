@@ -22,6 +22,8 @@ The remainder of this page contains the following sections:
 * [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
 * [Selecting Markdown Documentation Styles](#selecting-markdown-documentation-styles) - conventions within the pages
 * [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
+	+ [Showing Markdown as literal text](#showing-markdown-as-literal-text) - used to show how to use Markdown
+	+ [Controlling width of table columns](#controlling-width-of-table-columns) - helpful when defaults are not working well
 	+ [Link to  a Markdown file in the same or different folder](#link-to-a-markdown-file-in-the-same-or-different-folder)
 	+ [Link to a heading in Markdown file](#link-to-a-heading-in-markdown-file)
 	+ [Link to a named location that is not a section heading](#link-to-a-named-location-that-is-not-a-section-heading)
@@ -157,6 +159,38 @@ Other choices can be made to ensure consistency in the documentation.
 
 The following are useful examples and tips determined through use of MkDocs.
 
+### Controlling width of table columns ###
+
+Markdown tables in MkDocs sites set table column widths based on the amount of content in each column.
+Wider columns are used for columns with more characters/words.
+This can lead to undesirable results, such as line breaks in the middle of words.
+It is possible to insert HTML characters such as the non-breaking-hyphen (`&#8209;`);
+however, this leads to ugly content and it may not be possible to control all breaks.
+
+Another option is to include the non-breaking space characters in the header of the table sufficient to make the column wide enough, for example:
+
+| **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
+| -------- | --------- | --------- |
+| --some-option | This is a command parameter | default value | 
+
+Source:
+
+```
+| **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
+| -------- | --------- | --------- |
+| --some-option | This is a command parameter | default value | 
+```
+
+### Showing Markdown as literal text ###
+
+It is often useful to show examples of Markdown, such as in this documentation.
+To do so, indent the Markdown by 4 spaces, as shown in the following example.
+The back ticks will be shown as typed in the source file and are not interpreted as formatting.
+
+    ```sh
+    $ some-shell-command
+    ```
+
 ### Link to a Markdown file in the same or different folder ###
 
 A Markdown file can be linked to in the same folder by using the link notation.
@@ -215,6 +249,14 @@ For example, the following uses notation <code>```sh</code> to indicate that the
 cd someDir
 ls -la
 ```
+Source Markdown:
+
+    ```sh
+    # Some script
+    cd someDir
+    ls -la
+    ```
+
 
 The following provides a list of languages supported by Markdown, although support will vary by tool:
 

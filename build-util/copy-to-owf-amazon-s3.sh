@@ -2,8 +2,7 @@
 #
 # Copy the site/* contents to the learn.openwaterfoundation.org website
 # - replace all the files on the web with local files
-# - location is learn.openwaterfoundation.org/owf-learn-mkdocs
-# - must specify Amazon profile
+# - must specify Amazon profile as argument to the script
 
 # Set --dryrun to test before actually doing
 dryrun=""
@@ -38,3 +37,5 @@ cd ../mkdocs-project; mkdocs build --clean; cd ../build-util
 
 # Now sync the local files up to Amazon S3
 aws s3 sync ../mkdocs-project/site ${s3Folder} ${dryrun} --delete --profile "$awsProfile"
+
+exit $?
