@@ -19,11 +19,6 @@ pages:
 theme: material
 # Default "readthedocs" theme distributed with MkDocs
 #theme: readthedocs
-# See installation instructions for bootstrap theme:  http://mkdocs.github.io/mkdocs-bootstrap/
-# - bootstrap has no search feature
-#theme: bootstrap
-# See installation instructions for bootswatch theme:  http://mkdocs.github.io/mkdocs-bootswatch/
-#theme: cosmo
 # Don't indicate the repo because Edit will be shown on every page (don't want that in deployed mode)
 # - Also see edit_uri if repo_url is specified
 #repo_url:  https://github.com/OpenWaterFoundation/owf-learn-mkdocs
@@ -31,11 +26,6 @@ site_description:  Open Water Foundation Learn MkDocs
 site_author:  Open Water Foundation
 site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
 copyright:  Copyright Open Water Foundation
-# Extra options
-extra:
-  # Use extra CSS to customize styles, based on theme
-  extra_css: 'css/extra-material-theme.css'
-  # extra_javascript:
-  # OWF logo
-  # - does not look that good so comment out for now
-    #logo:   'images/OWF-Logo-Color.png'
+# Use extra CSS to customize styles, based on theme
+extra_css:
+  - 'css/extra-material-theme.css'

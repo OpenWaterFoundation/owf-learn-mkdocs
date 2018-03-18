@@ -17,6 +17,7 @@ For example, [view the source files for this documentation on GitHub](https://gi
 The remainder of this page contains the following sections:
 
 * [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
+	+ [Custom Theme Configuration](#custom-theme-configuration)
 * [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content) - shows website in browser
 	+ [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
 * [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
@@ -24,6 +25,7 @@ The remainder of this page contains the following sections:
 * [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
 	+ [Showing Markdown as literal text](#showing-markdown-as-literal-text) - used to show how to use Markdown
 	+ [Controlling width of table columns](#controlling-width-of-table-columns) - helpful when defaults are not working well
+	+ [Provide link to view full-size image](#provide-link-to-view-full-size-image) - view full-size image because MkDocs sizes to fit page
 	+ [Link to  a Markdown file in the same or different folder](#link-to-a-markdown-file-in-the-same-or-different-folder)
 	+ [Link to a heading in Markdown file](#link-to-a-heading-in-markdown-file)
 	+ [Link to a named location that is not a section heading](#link-to-a-named-location-that-is-not-a-section-heading)
@@ -69,6 +71,36 @@ To use a third-party theme, review the features of a theme and follow installati
 
 After installing the theme, change the `theme` configuration property in the `mkdocs.yml` file to indicate the new theme.
 It may be necessary to and restart MkDocs (see next section).
+
+### Custom Theme Configuration ###
+
+Custom theme configuration can be set.
+If using the Material theme, the following is useful to add to the `mkdocs.yml` file to control CSS.
+
+```
+# Use extra CSS to customize styles, based on theme
+extra_css:
+  - 'css/extra-material-theme.css'
+```
+
+The following custom CDSS configuration ensures that bulleted lists appear correctly:
+
+```
+/* Custom styles to override MkDocs defaults and enhance theme */
+
+/* Unordered list <ul> symbols:
+ * - level 2 is hollow circle
+ * - level 3 is filled square
+ * - ul default is filled disc (bullet)
+ */
+article ul ul {
+        list-style-type:  circle !important;
+}
+
+article ul ul ul {
+        list-style-type:  square !important;
+}
+```
 
 ## Starting Local Web Server to Review Content ##
 
@@ -180,6 +212,21 @@ Source:
 | -------- | --------- | --------- |
 | --some-option | This is a command parameter | default value | 
 ```
+
+### Provide link to view full-size image ###
+
+MkDocs sizes images to fit within the width of the formatted page.
+This can lead to images being too small to clearly read.
+The following can be inserted in the Markdown file to provide a link to the full-size image.
+In this example the image file is in the same folder as the Markdown file.
+
+```
+The following dialog is used to edit the command and illustrates the command syntax.
+<a href="../Comment.png">See also the full-size image.</a>
+
+![Comment](Comment.png)
+```
+It is unclear why the `../` notation is needed to move up a folder level to find the image, but it is.
 
 ### Showing Markdown as literal text ###
 
