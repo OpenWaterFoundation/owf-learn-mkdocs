@@ -1,4 +1,4 @@
-# Learn MkDocs / Overview
+# MkDocs / Overview
 
 There is often a need to create an integrated static website to organize documentation or other content
 and provide navigation between resources.
@@ -9,7 +9,7 @@ in which case the web browser simply displays pre-generated content.
 Links can be included in static website content to access dynamic content, as needed.
 
 MkDocs is a useful documentation tool that processes [Markdown](https://en.wikipedia.org/wiki/Markdown) files into a static website
-(see also [Markdown in Resources section](resources).
+(see also [Markdown in Resources section](resources.md).
 The source Markdown files for the website are simple text files and images that can easily be maintained under version control.
 For example, text file versions are tracked rather than binary document files such as Microsoft Word.
 This approach works well for many documents that benefit from navigation and web integration.

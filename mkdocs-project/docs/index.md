@@ -26,7 +26,7 @@ use MkDocs software.
 
 This documentation is not intended to be a full reference for MkDocs or Markdown but focuses on topics that
 will help understand important technical concepts and be successful with MkDocs.
-See the [Resources section](resources) for general information about MkDocs.
+See the [Resources section](resources.md) for general information about MkDocs.
 
 ## License ##
 

@@ -1,4 +1,4 @@
-# Learn MkDocs / Resources #
+# MkDocs / Resources #
 
 The following are useful resources.
 

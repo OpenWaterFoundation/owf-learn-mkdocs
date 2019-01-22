@@ -1,4 +1,4 @@
-# Learn MkDocs / Edit Content #
+# MkDocs / Edit Content #
 
 Website content pages are created/edited with a text editor.
 Each markdown file that is created should be included in the `mkdocs.yml` configuration file so that the MkDocs
@@ -9,6 +9,8 @@ See the following MkDocs and Markdown resources to help with formatting content.
 Additionally, because Markdown is text, one of the best ways to learn is to view the source files
 for a Markdown document.
 For example, [view the source files for this documentation on GitHub](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).
+Note that GitHub will render the Markdown in formatted form.  To view the source Markdown file,
+click on the `.md` file of interest and use the ***Raw*** button.
 
 * [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
 * [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
@@ -17,7 +19,7 @@ For example, [view the source files for this documentation on GitHub](https://gi
 The remainder of this page contains the following sections:
 
 * [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
-	+ [Custom Theme Configuration](#custom-theme-configuration)
+	+ [Custom CSS Configuration](#custom-css-configuration)
 * [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content) - shows website in browser
 	+ [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
 * [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
@@ -41,7 +43,8 @@ For example, the following uses one of the default themes distributed with MkDoc
 (see also the [Read the Docs website](https://readthedocs.org/), which is a public location for documents).
 
 ```yaml
-theme: readthedocs
+theme:
+  name: readthedocs
 ```
 
 Changing the theme involves installing the theme files and changing the configuration file.
@@ -67,14 +70,14 @@ navigation within a page (right navigation panel), and is also mobile-friendly
 This documentation uses the Material theme.
 
 To use a third-party theme, review the features of a theme and follow installation instructions.
-[See the Install MkDocs section](install) for more information.
+[See the Install MkDocs section](install.md) for more information.
 
 After installing the theme, change the `theme` configuration property in the `mkdocs.yml` file to indicate the new theme.
 It may be necessary to and restart MkDocs (see next section).
 
-### Custom Theme Configuration ###
+### Custom CSS Configuration ###
 
-Custom theme configuration can be set.
+Custom CSS configuration can be set to control the appearance of HTML elements.
 If using the Material theme, the following is useful to add to the `mkdocs.yml` file to control CSS.
 
 ```
@@ -83,7 +86,8 @@ extra_css:
   - 'css/extra-material-theme.css'
 ```
 
-The following custom CDSS configuration ensures that bulleted lists appear correctly:
+The following custom CDSS configuration ensures that multiple levels of bulleted lists appear correctly
+(default behavior is to use solid dots for all levels):
 
 ```
 /* Custom styles to override MkDocs defaults and enhance theme */
@@ -129,32 +133,17 @@ but the referenced file does not yet exist.
 In this case, create a basic file so that the server is not impacted by a missing file.
 
 It is often helpful to use a script to document how to run processes.
-The following [`run-mkdocs-serve-8000.sh`](https://github.com/OpenWaterFoundation/owf-learn-mkdocs/tree/master/build-util/run-mkdocs-serve-8000.sh)
-script for Cygwin and Linux illustrates how to run the MkDocs server on a port 8000 (the default).
-A similar script could be used to run on a specific port,
+The [`run-mkdocs-serve-8000.sh`](https://github.com/OpenWaterFoundation/owf-learn-mkdocs/tree/master/build-util/run-mkdocs-serve-8000.sh)
+script for Cygwin and Linux illustrates how to run the MkDocs server on a port 8000 (the default) for this documentation.
+A similar script can be used to run on a specific port,
 which is useful when multiple servers need to be run at the same time.
+The following can be dealt with in such a script:
 
-```sh
-#!/bin/sh
-#
-# Run mkdocs serve on port 8000 (default)
-
-# Make sure that this is being run from the build-util folder
-pwd=`pwd`
-dirname=`basename ${pwd}`
-if [ ! ${dirname} = "build-util" ]
-        then
-        echo "Must run from build-util folder"
-        exit 1
-fi
-
-cd ../mkdocs-project
-
-echo "View the website using http://localhost:8000"
-#mkdocs serve -a 0.0.0.0:8000
-mkdocs serve
-
-```
+* Make sure that the script can be run from any folder and still work.
+* Confirm that the correct version of MkDocs is running.
+* Potentially, copy the source files and modify programmatically,
+for example to support "latest" and versioned copies of the documentation,
+with links to versioned documentation that works.
 
 ### Stopping MkDocs Web Server ###
 
@@ -167,8 +156,7 @@ for example:
 
 * Use consistent convention such as all lowercase with dashes separating words, for example `deploy-website` (folder)
 and `deploy-website.md` (Markdown file).
-* If images are used, create a folder such as `pagename-images`, where `pagename` is the name of the content page and
-the indicated folder is the images for that page.
+* If images are used, create a folder such as `images` for imaged in a content folder.
 
 It is possible that other documentation will link to a page so some care should be taken not to frequently change filenames.
 
@@ -241,16 +229,20 @@ The back ticks will be shown as typed in the source file and are not interpreted
 ### Link to a Markdown file in the same or different folder ###
 
 A Markdown file can be linked to in the same folder by using the link notation.
-In this case the name of the markdown file without `.md` is specified in parentheses.
+The name of the markdown file with `.md` is specified in parentheses.
+MkDocs prior to version 1 (?) allowed omitting the file extension but this seems to break links in version 1.0 and later,
+where the MkDocs
+[`use_directory_urls: true` configuration property](https://www.mkdocs.org/user-guide/configuration/#use_directory_urls)
+is the default in MkDocs as of version 1.
 
 ```text
-[text for visible link](other-markdown-file)
+[text for visible link](other-markdown-file.md)
 ```
 
 If the file exists in a different folder, specify a leading path:
 
 ```text
-[text for visible link](../some-folder/other-markdown-file)
+[text for visible link](../some-folder/other-markdown-file.md)
 ```
 
 ### Link to a heading in Markdown file ###
@@ -265,7 +257,7 @@ The following are rules for specifying the reference location in parentheses:
 * Use all lowercase in the location name.
 
 ```text
-[text for visible link](../parallel-folder/other-markdown-file#heading-words)
+[text for visible link](../parallel-folder/other-markdown-file.md#heading-words)
 
 ```
 
@@ -308,4 +300,4 @@ Source Markdown:
 The following provides a list of languages supported by Markdown, although support will vary by tool:
 
 * [GitHub Markdown language file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
-* [Languages Supported by Github Flavored Markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/) - warning, profanity
+* [Languages Supported by Github Flavored Markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/)

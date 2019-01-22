@@ -1,7 +1,8 @@
-# Learn MkDocs / Use Site#
+# MkDocs / Use Site #
 
 Once the website is deployed, features will be available based on the
-[theme that is used](edit#selecting-a-theme).
+theme that is used, for example
+[Material theme](material-theme.md).
 
 The remainder of this page contains the following sections:
 
@@ -31,7 +32,7 @@ in the web browser.  Typically the page will be printed without the menus and na
 
 ## Save a Page to a File ##
 
-It may be desirable to, for example, email a single page to a third party.
+It may be desirable to, for example, email a single page to a third party or archive the document as if viewed.
 The following sections describe how to save the file using common browsers.
 
 ### Chrome Browser ###
@@ -48,4 +49,5 @@ involves sharing the URL link to the website.
 Therefore, visit the documentation page online, copy the browser link into an email, text, tweet, or other communication,
 and share the documentation.
 
-More skilled collaborators can contribute to the documentation via the [GitHub project](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).
+More skilled collaborators can contribute to the documentation via the
+[GitHub repository](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).

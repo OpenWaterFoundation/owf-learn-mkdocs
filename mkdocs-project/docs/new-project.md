@@ -1,4 +1,4 @@
-# Learn MkDocs / New Project #
+# MkDocs / New Project #
 
 MkDocs uses a standard folder structure to organize its configuration file and Markdown content files.
 The MkDocs "project" consists of the following:
@@ -12,7 +12,7 @@ The MkDocs "project" consists of the following:
 	the navigation features for a MkDocs theme may not handle the long list well.
 	For example, some themes do not have collapsable navigation menus and the long list of files will require vertical
 	scrolling for navigation or horizontal menus will overflow the page heading.
-	Themes are discussed in the [Edit section](edit)).
+	Themes are discussed in the [Edit Content](edit.md) section).
 * `docs/` folder containing Markdown files, images, and other content.
 	+ Folders can be used for content sections
 	+ Folders can be used for linked files such as images and examples.
@@ -58,18 +58,18 @@ it is recommended to simply use `mkdocs-project` for the name, which will result
 This clearly indicates that a MkDocs project can be found in `mkdocs-project`.
 
 ```text
-some-parent-folder/        (The parent folder where the Git repository was cloned)
-  owf-learn-mkdocs/        (Git repository folder, under which resides .git, etc.)
-    README.md              (As per GitHub, etc. conventions)
-    .gitattributes         (As per Git conventions)
-    .gitignore             (As per Git conventions, remember to ignore mkdocs-project/site/)
-    build-util/            (See Deploy Website section of this documentation)
-    mkdocs-project/        (MkDocs project location, under which are all MkDocs files)
-      mkdocs.yml           (MkDocs project configuration file)
-      docs/                (Folder where Markdown and other content files exist)
+some-parent-folder/        The parent folder where the Git repository was cloned.
+  owf-learn-mkdocs/        Git repository folder, under which resides .git, etc.
+    README.md              As per GitHub, etc. conventions.
+    .gitattributes         As per Git conventions.
+    .gitignore             As per Git conventions, remember to ignore mkdocs-project/site/.
+    build-util/            See Deploy Website section of this documentation.
+    mkdocs-project/        MkDocs project location, under which are all MkDocs files.
+      mkdocs.yml           MkDocs project configuration file.
+      docs/                Folder where Markdown and other content files exist.
         *.md 
-      site/                (Folder automatically created by MkDocs software)
-        index.html         (Default landing page for static website)
+      site/                Folder automatically created by MkDocs software.
+        index.html         Default landing page for static website.
         many other files
 ```
 
@@ -95,20 +95,20 @@ The files under the above folders should be similar to the previous section, for
 equivalent to `doc-dev-mkdocs-project` (below):
 
 ```text
-some-parent-folder/           (The parent folder where the Git repository was cloned)
-  some-git-repo-folder/       (Git repository folder, under which resides .git, etc.)
-    README.md                 (As per GitHub, etc. conventions)
-    .gitattributes            (As per Git conventions)
-    .gitignore                (As per Git conventions, remember to ignore doc-dev-mkdocs-project/site)
-    doc-dev-mkdocs-project/   (Folder dedicated to a MkDocs project for developer documentation)
-      build-util/             (See Deploy Website section of this documentation)
-      mkdocs.yml              (MkDocs project configuration file)
-      docs/                   (Folder where Markdown and other content files exist)
+some-parent-folder/           The parent folder where the Git repository was cloned.
+  some-git-repo-folder/       Git repository folder, under which resides .git, etc.
+    README.md                 As per GitHub, etc. conventions.
+    .gitattributes            As per Git conventions.
+    .gitignore                As per Git conventions, remember to ignore doc-dev-mkdocs-project/site.
+    doc-dev-mkdocs-project/   Folder dedicated to a MkDocs project for developer documentation.
+      build-util/             See Deploy Website section of this documentation.
+      mkdocs.yml              MkDocs project configuration file.
+      docs/                   Folder where Markdown and other content files exist.
         *.md 
-      site/                   (Folder automatically created by MkDocs software)
-        index.html            (Default landing page for static website)
+      site/                   Folder automatically created by MkDocs software.
+        index.html            Default landing page for static website.
         many other files
-    src/                      (Source code files in software project)
+    src/                      Source code files in software project.
 ```
 
 See [Create New MkDocs Project](#create-new-mkdocs-project) below for instructions on creating the above files.
