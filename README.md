@@ -26,7 +26,7 @@ mkdocs-project/       Typical MkDocs project for this documentation.
 ## Development Environment ##
 
 The development environment for contributing to this project requires installation of Python, MkDocs, and Material MkDocs theme.
-Python 2 has been used for development.  See the [`mkdocs-project/docs/install.md`](mkdocs-project/docs/install.md)
+Python 3 has been used for development.  See the [`mkdocs-project/docs/install.md`](mkdocs-project/docs/install.md)
 file for information about installing these tools.
 
 ## Editing and Viewing Content ##
@@ -34,7 +34,7 @@ file for information about installing these tools.
 If the development environment is properly configured, edit and view content as follows:
 
 1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
-2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Linux) or equivalent.
+2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Cygwin/Linux) or equivalent.
 3. View content in a web browser using URL `http://localhost:8000`.
 
 ## License ##
@@ -49,19 +49,12 @@ Contribute to the documentation as follows:
 1. Use GitHub repository issues to report minor issues.
 2. Use GitHub pull requests.
 
-## Maintainers ##
-
-This repository is maintained by the [Open Water Foundation](http://openwaterfoundation.org/).
-
-## Contributors ##
-
-Steve Malers, Open Water Foundation (@smalers)
-
 ## Release Notes ##
 
 The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
 if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
 
+* 2019-01-22 [7] - update documentation to focus on Python 3 and MkDocs 1+
 * 2017-11-29 [6] - add examples for formatting Markdown literally and controlling table column width
 * 2017-10-21 [2,3,4] - cleanup theme documentation, add issue template.
 * 2017-10-20 [1] - switch to Material theme, update documentation based on experience.
