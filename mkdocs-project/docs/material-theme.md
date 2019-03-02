@@ -10,6 +10,7 @@ The following provide guidance for using the Material theme:
 * [Specifying Material Theme](#specifying-material-theme)
 * [Configuring Material Theme](#configuring-material-theme)
 	+ [Specifying the Favicon](#specifying-the-favicon)
+	+ [Enabling Google Analytics](#enabling-google-analytics)
 
 -----------------
 
@@ -42,7 +43,33 @@ However, the Material theme has its own
 
 To specify a favicon:
 
-1. Create a `favicon.ico` file.  For example use Gimp software to create a 32x32 pixel image and save with an `ico` file extension.
-2. Place the file in the `docs/img` folder in the MkDocs project folder.
+1. Create a `favicon.ico` file.  Any filename can be used (does not need to be `favicon`).
+MkDocs will configure the main `index.html` page to use the favicon and may rename the file.
+Favicon files can be `.ico` or `.png` format.
+For example use Gimp software to create a 32x32 pixel image and save with an `ico` file extension.
+2. Save the file in a folder under `docs`, for example `docs/img` or `docs/images` in the MkDocs project folder.
+3. Specify configuration information in the `mkdocs.yml` file, similar to the following:
+
+```
+theme:
+  name: 'material'
+  favicon: 'img/favicon.ico'
+```
 
 The favicon may not be shown when viewing the documentation locally but should be visible when deployed to the web.
+
+### Enabling Google Analytics ###
+
+Enabling Google Analytics is useful for tracking page hits.
+However, ad blockers may disable Google Analytics, and therefore tracking data will be less than 100% of actual.
+The MkDocs Material theme supports Google Analytics integration (see the
+[Material for MkDocs documentation](https://squidfunk.github.io/mkdocs-material/getting-started#google-analytics/)).
+The following is an example of MkDocs configuration file properties to enable Google Analytics,
+where the appropriate tracking ID needs to be specified.
+The static website pages created by MkDocs will contain Google Analytics JavaScript code.
+
+```
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+```

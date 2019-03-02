@@ -10,6 +10,7 @@ nav:
 - Install MkDocs: install.md
 - MkDocs Version Differences: mkdocs-versions.md
 - New Project: new-project.md
+- Configuration: config.md
 - Edit Content: edit.md
 - Material Theme:  material-theme.md
 - Deploy Website: deploy.md
@@ -18,11 +19,17 @@ nav:
 # ------- configuration properties ---------------
 # Alphabetize
 # ------------------------------------------------
-copyright:  Copyright Open Water Foundation
+copyright:  Copyright 2017-2019, Open Water Foundation
 # ------------------------------------------------
 # Use extra CSS to customize styles, based on theme
 extra_css:
   - 'css/extra-material-theme.css'
+# ------------------------------------------------
+# Google Analytics
+# - see:  https://squidfunk.github.io/mkdocs-material/getting-started/#google-analytics
+google_analytics:
+ - 'UA-135465513-1'
+ - auto
 # ------------------------------------------------
 # Favicon is supposed to automatically be found:
 # - in docs/img/favicon.ico
@@ -40,7 +47,7 @@ site_description:  Open Water Foundation Learn MkDocs
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
 theme:
   name: 'material'
-  favicon:  'img/favicon.ico'
+  favicon: 'images/OWF-Logo-Favicon-32x32.ico'
 # ------------------------------------------------
 # The following controls how URLs are created
 # - As of MkDocs 1.0 the default is true meaning URLs to a page ABC is ABC/ rather than something/ABC.html.
