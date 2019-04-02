@@ -27,7 +27,8 @@ The remainder of this page contains the following sections:
 * [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
 	+ [Showing Markdown as literal text](#showing-markdown-as-literal-text) - used to show how to use Markdown
 	+ [Controlling width of table columns](#controlling-width-of-table-columns) - helpful when defaults are not working well
-	+ [Provide link to view full-size image](#provide-link-to-view-full-size-image) - view full-size image because MkDocs sizes to fit page
+	+ [Center image and caption with link to full-size image](#center-image-and-caption-with-link-to-view-full-size-image)
+	+ [Center table and caption](#center-table-and-caption)
 	+ [Link to  a Markdown file in the same or different folder](#link-to-a-markdown-file-in-the-same-or-different-folder)
 	+ [Link to a heading in Markdown file](#link-to-a-heading-in-markdown-file)
 	+ [Link to a named location that is not a section heading](#link-to-a-named-location-that-is-not-a-section-heading)
@@ -201,20 +202,62 @@ Source:
 | --some-option | This is a command parameter | default value | 
 ```
 
-### Provide link to view full-size image ###
+### Center image and caption with link to view full-size image ###
 
-MkDocs sizes images to fit within the width of the formatted page.
-This can lead to images being too small to clearly read.
-The following can be inserted in the Markdown file to provide a link to the full-size image.
-In this example the image file is in the same folder as the Markdown file.
+MkDocs by default left-justifies images and text.
+MkDocs also sizes images to fit within the width of the formatted page.
+This can lead to ugly alignment and images being too small to clearly read.
+The following can be inserted in the Markdown file to center the image and
+its caption and provide a link to the full-size image.
+In this example the image file is in a folder named `images.`
+
+**<p style="text-align: center;">
+![OWF-Logo-Color.png](images/OWF-Logo-Color.png)
+</p>**
+
+**<p style="text-align: center;">
+Example Image (<a href="../images/OWF-Logo-Color.png">see full-size image</a>)
+</p>**
 
 ```
-The following dialog is used to edit the command and illustrates the command syntax.
-<a href="../Comment.png">See also the full-size image.</a>
+**<p style="text-align: center;">
+![OWF-Logo-Color.png](images/OWF-Logo-Color.png)
+</p>**
 
-![Comment](Comment.png)
+**<p style="text-align: center;">
+Example Image (<a href="../images/OWF-Logo-Color.png">see full-size image</a>)
+</p>**
 ```
-It is unclear why the `../` notation is needed to move up a folder level to find the image, but it is.
+
+Technical notes:
+
+* It is also possible to add custom CSS to handle formatting,
+but care must be taken to not interfere with other CSS properties.
+* The `**` around the image is necessary and if removed will result in no image.
+Such formatting tricks may need to be evaluated for specific themes.
+* `../` must be used when linking to the full-size image, necessary due to how the final HTML is constructed.
+
+### Center table and caption ###
+
+A simple table is as follows:
+
+| **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
+| -------- | --------- | --------- |
+| --some-option | This is a command parameter | default value | 
+
+To center the table and its caption:
+
+**Unfortunately, don't have this figured out yet.**
+
+<div style="text-align: center;">
+| **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
+| -------- | --------- | --------- |
+| --some-option | This is a command parameter | default value | 
+</div>
+
+**<p style="text-align: center;">
+Table Caption
+</p>**
 
 ### Showing Markdown as literal text ###
 
@@ -225,6 +268,12 @@ The back ticks will be shown as typed in the source file and are not interpreted
     ```sh
     $ some-shell-command
     ```
+
+Alternatively, without the leading spaces the above is rendered as follows:
+
+```sh
+$ some-shell-command
+```
 
 ### Link to a Markdown file in the same or different folder ###
 
