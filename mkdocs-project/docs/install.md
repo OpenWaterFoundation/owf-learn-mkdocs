@@ -189,11 +189,23 @@ The following instructions describe how to install MkDocs on Windows 7 & 10.
 The following focuses on Python 3.
 
 Note that the Python installation for Windows has changed over time.
-Newer installations of Python recommend installing the software in a user files locations,
+Newer installations of Python recommend installing the software in a user's file locations,
 which corresponds to `C:\Users\usr\AppData` rather than older `C:\Python27`, etc., in order
 to minimize need for administrator privileges and avoid installing Python packages in a system folder.
+
 Python software for new installations is also accessed using the `py` program.
-For example, the following illustrates how Python is found on the command line:
+The `py.exe` program is installed in `C:\windows` and therefore is always in the `PATH`
+environment variable.
+The `py` program finds Python 2 and 3 versions on the system and by default runs the
+newest installed version.
+This ensures that Python can be run without adding a specific Python installation folder to
+the `PATH`.
+Of course, installing `py` requires administrative privileges even if the Python
+software itself is installed in user files.
+The benefit of installing Python in user files is that additional packages can be
+installed without administrative privileges.
+
+The following illustrates how Python is found on the command line:
 
 ```sh
 >where python
@@ -205,10 +217,6 @@ INFO: Could not find files for the given pattern(s).
 >where py
 C:\Windows\py.exe
 ```
-
-The `py` program is installed in the Windows system folder (and requires Administrator privileges).
-Consequently, to run Python on Window requires running the `py` program.
-Use `py -h` to see usage.
 
 ### Install Python ###
 
@@ -225,6 +233,9 @@ Installed Pythons found by py Launcher for Windows
  -3.7-64 *
  -3.5-64
  -2.7-64
+
+>py --version
+Python 3.7.2
 ```
 
 #### Checking for Python in `PATH` ####
@@ -239,12 +250,12 @@ $ python --version
 Python 3.5.1
 ```
 
-Python may not have been added to the `PATH` environment variable but generally is when installed.
+Python may not have been added to the `PATH` environment variable.
 If nothing is shown above, also check for Python installation in `C:\Users\xxx\AppData\Local\Program\Python\Python37`
 (which is used for Python 3.7), although other locations may have been used,
 such as `C:\Users\xxx\AppData\Roaming\Python\Python35`.
 
-If necessary, install Python for Windows from the [Python download site].
+If necessary, install Python for Windows from the [Python download site](https://www.python.org/downloads/windows/).
 
 ### Install pip
 
