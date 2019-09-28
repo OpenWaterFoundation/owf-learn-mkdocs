@@ -22,25 +22,39 @@ or other static hosting solution.
 
 The [`copy-to-owf-amazon-s3.sh`](https://github.com/OpenWaterFoundation/owf-learn-mkdocs/blob/master/build-util/copy-to-owf-amazon-s3.sh)
 script illustrates how to copy the files to Amazon S3 using the Amazon command line interface tools,
-in this case using a Cygwin/Linux `sh` script that expects to be provided with an Amazon web services profile name via script command parameter.
+in this case using a `sh` script designed to run on MinGW (Git Bash), Cygwin, and Linux.
+The script expects to be provided with an Amazon web services profile name via script command parameter.
 The script is in this case named `copy-to-owf-amazon-s3.sh` and is located in the `build-util` folder in the repository.
 
-The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
-The `site` folder is renamed to `owf-learn-mkdocs` during the upload.
-The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
+The `aws` command line script will have been installed using pip
+(see [AWS CLI installation documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)).
+To ensure that the package is installed with the same version of Python as `mkdocs`,
+first list Python versions using `py --list`.
+To control the `awscli` installation, use a command like `py -m pip install awscli`,
+which will use the pip corresponding to latest Python.
+Similar commands can be used to install for a specific version of Python,
+for example `py -3.7 -m pip install awscli` or similar.
+See also [OWF / Learn Amazon Web Services](http://learn.openwaterfoundation.org/owf-learn-aws/).
+
+The `copy-to-owf-amazon-s3.sh` script does the following:
+
+* The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
+* The `site` folder is renamed to `owf-learn-mkdocs` during the upload to S3 bucket.
+* The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
 See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
 
 Using such a script allows the following:
 
 * run the script from any folder
 * check the version of MkDocs
-* specify the port number, in case multiple MkDocs servers are run at the same time
-* automate modifying content, for example to support "latest" and versioned documentation, with links that
-cross-link to other versioned documentation (this needs to be evaluated)
+* automate processing, for example if part of a build process
 
 ## Deploy Website to Google Cloud Platform ##
 
-A similar approach can be taken to deploy to Google Cloud Platform (need to insert an example).
+A similar approach can be taken to deploy to Google Cloud Platform.
+For example see the
+[TSTool OpenCDSS](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/blob/master/build-util/copy-to-co-dnr-gcp.sh)
+script.
 
 ## Deploy to WordPress ##
 

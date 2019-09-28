@@ -3,21 +3,10 @@
 Website content pages are created/edited with a text editor.
 Each markdown file that is created should be included in the `mkdocs.yml` configuration file so that the MkDocs
 software can process from Markdown into final form.
-
-The MkDocs documentation is straightforward and provides examples of content.
-See the following MkDocs and Markdown resources to help with formatting content.
-Additionally, because Markdown is text, one of the best ways to learn is to view the source files
-for a Markdown document.
-For example, [view the source files for this documentation on GitHub](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).
-Note that GitHub will render the Markdown in formatted form.  To view the source Markdown file,
-click on the `.md` file of interest and use the ***Raw*** button.
-
-* [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
-* [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
-* [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
 The remainder of this page contains the following sections:
 
+* [Markdown Introduction](#markdown-introduction)
+* [Markdown Text Editors](#markdown-text-editors)
 * [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
 	+ [Custom CSS Configuration](#custom-css-configuration)
 * [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content) - shows website in browser
@@ -35,6 +24,35 @@ The remainder of this page contains the following sections:
 	+ [Include language indicator for more specific formatting](#include-language-indicator-for-more-specific-formatting)
 
 -----------------
+
+## Markdown Introduction ##
+
+The MkDocs documentation is straightforward and provides examples of content.
+See the following MkDocs and Markdown resources to help with formatting content.
+Additionally, because Markdown is text, one of the best ways to learn is to view the source files
+for a Markdown document.
+For example, [view the source files for this documentation on GitHub](https://github.com/OpenWaterFoundation/owf-learn-mkdocs).
+Note that GitHub will render the Markdown in formatted form.  To view the source Markdown file,
+click on the `.md` file of interest and use the ***Raw*** button.
+The following are references for Markdown:
+
+* [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
+* [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
+* [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Markdown Text Editors ##
+
+Editing Markdown requires a text editor.
+Support for Markdown is being added to text editors over time,
+typically by providing a text editing panel and a parallel view/render panel to show the formatted result.
+These features are not needed with MkDocs because MkDocs formats Markdown as HTML for viewing
+in a web browser.
+However, a Markdown editor is still useful for README.md files that are used in the repository.
+
+The following are text editors that provide Markdown viewing features:
+
+* [Atom](https://atom.io/) - use ***Ctrl-Shift-m*** to display the Markdown viewer
+* [Visual Studio Code](https://code.visualstudio.com/) - use ***Ctrl-Shift-v*** to display the Markdown viewer
 
 ## Selecting a Theme ##
 
@@ -133,18 +151,19 @@ The server will not refresh content if, for example, a new entry has been made i
 but the referenced file does not yet exist.
 In this case, create a basic file so that the server is not impacted by a missing file.
 
-It is often helpful to use a script to document how to run processes.
+It is often helpful to use a script to run processes.
 The [`run-mkdocs-serve-8000.sh`](https://github.com/OpenWaterFoundation/owf-learn-mkdocs/tree/master/build-util/run-mkdocs-serve-8000.sh)
-script for Cygwin and Linux illustrates how to run the MkDocs server on a port 8000 (the default) for this documentation.
+script for MinGW (Git Bash), Cygwin,
+and Linux illustrates how to run the MkDocs server on a port 8000 (the default) for this documentation.
 A similar script can be used to run on a specific port,
 which is useful when multiple servers need to be run at the same time.
 The following can be dealt with in such a script:
 
 * Make sure that the script can be run from any folder and still work.
-* Confirm that the correct version of MkDocs is running.
-* Potentially, copy the source files and modify programmatically,
-for example to support "latest" and versioned copies of the documentation,
-with links to versioned documentation that works.
+* Find an appropriate Python to run `mkdocs` - can specify the `mkdocs` module to run,
+no need to run a script.
+* Confirm that the correct version of MkDocs is run for MkDocs files (e.g., require MkDocs 1+).
+* Potentially, make adjustments to the content programmatically.
 
 ### Stopping MkDocs Web Server ###
 
@@ -247,7 +266,7 @@ A simple table is as follows:
 
 To center the table and its caption:
 
-**Unfortunately, don't have this figured out yet.**
+**Unfortunately, don't have centering a table figured out yet - this may be difficult due to CSS handling of sizing and scrolling.**
 
 <div style="text-align: center;">
 | **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |

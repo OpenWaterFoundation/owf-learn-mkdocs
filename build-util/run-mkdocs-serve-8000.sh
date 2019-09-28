@@ -13,7 +13,15 @@ checkMkdocsVersion() {
 	requiredMajorVersion="1"
 	# On Cygwin, mkdocs --version gives:  mkdocs, version 1.0.4 from /usr/lib/python3.6/site-packages/mkdocs (Python 3.6)
 	# On Debian Linux, similar to Cygwin:  mkdocs, version 0.17.3
-	mkdocsVersionFull=$(mkdocs --version)
+	if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+		mkdocsVersionFull=$(mkdocs --version)
+	elif [ "$operatingSystem" = "mingw" ]; then
+		mkdocsVersionFull=$(py -m mkdocs --version)
+	else
+		echo ""
+		echo "Don't know how to run on operating system $operatingSystem"
+		exit 1
+	fi
 	echo "MkDocs --version:  $mkdocsVersionFull"
 	mkdocsVersion=$(echo $mkdocsVersionFull | cut -d ' ' -f 3)
 	echo "MkDocs full version number:  $mkdocsVersion"
@@ -30,6 +38,29 @@ checkMkdocsVersion() {
 	fi
 }
 
+# Determine the operating system that is running the script
+# - mainly care whether Cygwin or MINGW
+checkOperatingSystem()
+{
+	if [ ! -z "${operatingSystem}" ]; then
+		# Have already checked operating system so return
+		return
+	fi
+	operatingSystem="unknown"
+	os=`uname | tr [a-z] [A-Z]`
+	case "${os}" in
+		CYGWIN*)
+			operatingSystem="cygwin"
+			;;
+		LINUX*)
+			operatingSystem="linux"
+			;;
+		MINGW*)
+			operatingSystem="mingw"
+			;;
+	esac
+}
+
 # Check the source files for issues
 # - the main issue is internal links need to use [](file.md), not [](file)
 checkSourceDocs() {
@@ -39,6 +70,9 @@ checkSourceDocs() {
 }
 
 # Entry point into the script
+
+# Check the operating system
+checkOperatingSystem
 
 # Make sure the MkDocs version is OK
 checkMkdocsVersion
@@ -54,6 +88,10 @@ cd ${scriptFolder}
 cd ../mkdocs-project
 
 echo "View the website using http://localhost:8000"
-echo "Kill the server with CTRL-C"
-#mkdocs serve -a 0.0.0.0:8000
-mkdocs serve
+echo "Stop the server with CTRL-C"
+if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+	mkdocs serve -a 0.0.0.0:8000
+elif [ "$operatingSystem" = "mingw" ]; then
+	# This is used by Git Bash
+	py -m mkdocs serve -a 0.0.0.0:8000
+fi
