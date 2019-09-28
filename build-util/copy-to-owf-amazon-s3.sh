@@ -142,7 +142,6 @@ if [ "$operatingSystem" = "mingw" ]; then
 	fi
 else
 	# For other Linux just try to run
-	echo "aws not configured for $operatingSystem"
 	aws s3 sync ../mkdocs-project/site ${s3Folder} ${dryrun} --delete --profile "$awsProfile"
 fi
 
