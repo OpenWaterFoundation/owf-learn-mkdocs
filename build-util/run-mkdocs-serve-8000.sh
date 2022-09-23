@@ -2,9 +2,54 @@
 (set -o igncr) 2>/dev/null && set -o igncr; # this comment is required
 # The above line ensures that the script can be run on Cygwin/Linux even with Windows CRNL
 #
-# Run 'mkdocs serve' on port 8000 (default)
+# Run 'mkdocs serve' on port 8000 (default) for MkDocs 1.x.
+#
+# The most recent version of this script is saved with Open Water Foundation owf-learn-mkdocs GitHub repository.
+# If changes are implemented, the version in owf-learn-mkdocs/build-util should be updated as the global master.
+# If necessary, run 'dos2unix' or 'unix2dos' (or equivalent) to ensure that line endings are OK in the copied script.
+#
+# -------------------------------------------------------------------------------------------------------------
+# This script attempts to find a suitable Python and mkdocs module for cygwin, Git bash, and Linux.
+# The script is assumed to be installed in one of two configurations, for example:
+#
+# Option 1 - repository is dedicated to the documentation:
+#
+# main-repo-folder/
+#   mkdocs-project/
+#     mkdocs.yml
+#   build-util/
+#     this-script
+#   doc/
+#   site/
+#
+# Option 2 - repository contains more than the documentation and documentation is in a top-level folder,
+# for example:
+#
+# main-repo-folder/
+#   doc-dev-mkdocs-project/
+#     mkdocs.yml
+#     build-util/
+#       this-script
+#     doc/
+#     site/
+#
+# In either case, a standard MkDocs folder structure is assumed with 'mkdocs.yml' configuration file,
+# 'docs/' folder for source files, and 'site/' folder for MkDocs-generated static website.
+# -------------------------------------------------------------------------------------------------------------
 
 # Supporting functions, alphabetized
+
+# Check the folder depth for the MkDocs project
+# - the folder where this script lives may be at various levels relative to the main MkDocs project folder
+# - depends on "scriptFolder" having been set
+checkFolderDepth() {
+	folderDepth=999
+	if [ -e "${scriptFolder}/../mkdocs-project/mkdocs.yml" ]; then
+		folderDepth=1
+	elif [ -e "${scriptFolder}/../../mkdocs-project/mkdocs.yml" ]; then
+		folderDepth=2
+	fi
+}
 
 # Make sure the MkDocs version is consistent with the documentation content
 # - require that at least version 1.0 is used because of use_directory_urls = True default
@@ -42,8 +87,7 @@ checkMkdocsVersion() {
 
 # Determine the operating system that is running the script
 # - mainly care whether Cygwin or MINGW
-checkOperatingSystem()
-{
+checkOperatingSystem() {
 	if [ ! -z "${operatingSystem}" ]; then
 		# Have already checked operating system so return
 		return
@@ -61,6 +105,7 @@ checkOperatingSystem()
 			operatingSystem="mingw"
 			;;
 	esac
+	echo "Detected operating system:  ${operatingSystem}"
 }
 
 # Check the source files for issues
@@ -73,6 +118,11 @@ checkSourceDocs() {
 
 # Entry point into the script
 
+# Get the folder where this script is located since it may have been run from any folder
+scriptFolder=$(cd $(dirname "$0") && pwd)
+# Change to the folder where the script is since other actions below are relative to that
+cd ${scriptFolder}
+
 # Check the operating system
 checkOperatingSystem
 
@@ -82,18 +132,30 @@ checkMkdocsVersion
 # Check the source files for issues
 checkSourceDocs
 
-# Get the folder where this script is located since it may have been run from any folder
-scriptFolder=`cd $(dirname "$0") && pwd`
-# Change to the folder where the script is since other actions below are relative to that
-cd ${scriptFolder}
+# Determine if this script is one or two folders under MkDocs project folder
+checkFolderDepth
 
-cd ../mkdocs-project
+# Change to the MkDocs project folder so that 'mkdocs' can be run and find files it expects.
+if [ ${folderDepth} -eq 1 ]; then
+	cd ../mkdocs-project
+elif [ ${folderDepth} -eq 2 ]; then
+	cd ../../mkdocs-project
+else
+	echo "Folder structure does not match expected 'mkdocs-project'.  Exiting."
+	exit 1
+fi
 
+# Run 'mkdocs serve' using an appropriate variation of Python command line.
 echo "View the website using http://localhost:8000"
 echo "Stop the server with CTRL-C"
 if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+	# For cygwin and linux, 'mkdocs' will probably be in the PATH
+	echo "On Cygwin and Linux... running 'mkdocs serve...'"
 	mkdocs serve -a 0.0.0.0:8000
 elif [ "$operatingSystem" = "mingw" ]; then
 	# This is used by Git Bash
+	echo "On MinGW (Git Bash) ... running 'py -m mkdocs serve...'"
 	py -m mkdocs serve -a 0.0.0.0:8000
 fi
+
+# Exiting the script will return to the starting folder
