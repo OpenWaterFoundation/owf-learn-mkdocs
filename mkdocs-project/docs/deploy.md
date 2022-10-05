@@ -41,7 +41,7 @@ The `copy-to-owf-amazon-s3.sh` script does the following:
 * The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
 * The `site` folder is renamed to `owf-learn-mkdocs` during the upload to S3 bucket.
 * The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
-See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
+  See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
 
 Using such a script allows the following:
 
