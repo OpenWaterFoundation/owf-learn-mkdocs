@@ -16,17 +16,17 @@ It may also be helpful to search the
 Version 1 made a few major changes that may impact source documentation files and project configuration.
 
 * File and link specification:
-	+ `use_directory_urls: true` is the default
-		- This causes URLs to end in `/` rather than a `.html` file. 
-		- [See the documentation](https://www.mkdocs.org/user-guide/configuration/#use_directory_urls)
-		- **This may cause old documentation to have broken links,
-		especially if the next item is also an issue.**
-	+ To make internal links work, must specify `.md` in filenames whereas previously the extension could be omitted.
-	This may be related to the above change.
-	+ See also console messages that are printed by `mkdocs`, which alert to missing and extra files.
+    + `use_directory_urls: true` is the default
+        - This causes URLs to end in `/` rather than a `.html` file. 
+        - [See the documentation](https://www.mkdocs.org/user-guide/configuration/#use_directory_urls)
+        - **This may cause old documentation to have broken links,
+          especially if the next item is also an issue.**
+    + To make internal links work, must specify `.md` in filenames whereas previously the extension could be omitted.
+      This may be related to the above change.
+    + See also console messages that are printed by `mkdocs`, which alert to missing and extra files.
 * Changes to `mkdocs.yml` configuration file:
-	+ Change `pages` to `nav`. 
-	+ See [reference to `mkdocs.yml` file](https://www.mkdocs.org/user-guide/configuration/) for supported properties.
+    + Change `pages` to `nav`. 
+    + See [reference to `mkdocs.yml` file](https://www.mkdocs.org/user-guide/configuration/) for supported properties.
 
 ## Version 0 ##
 
