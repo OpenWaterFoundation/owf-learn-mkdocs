@@ -20,7 +20,7 @@ nav:
 # ------- configuration properties ---------------
 # Alphabetize
 # ------------------------------------------------
-copyright:  Copyright 2017-2019, Open Water Foundation
+copyright:  Copyright 2017-2022, Open Water Foundation
 # ------------------------------------------------
 # Use extra CSS to customize styles, based on theme
 extra_css:
@@ -28,9 +28,10 @@ extra_css:
 # ------------------------------------------------
 # Google Analytics
 # - see:  https://squidfunk.github.io/mkdocs-material/getting-started/#google-analytics
-google_analytics:
- - 'UA-135465513-1'
- - auto
+extra:
+  analytics:
+    provider: google
+    property: 'G-KJFMBY739T'
 # ------------------------------------------------
 # Favicon is supposed to automatically be found:
 # - in docs/img/favicon.ico

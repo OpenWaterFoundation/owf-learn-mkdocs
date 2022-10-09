@@ -60,6 +60,31 @@ The favicon may not be shown when viewing the documentation locally but should b
 
 ### Enabling Google Analytics ###
 
+Google Analytics can be enabled for a MkDocs site to track visits to each page.
+
+#### Google Analytics 4 Property ####
+
+A Google Analytics 4 property can be configured using the Material theme configuration properties. See:
+
+* [Setting up site analytics](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/)
+
+The MkDocs configuration properties are similar to the following:
+
+```
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+```
+
+#### Google Analytics Universal Property ####
+
+**The Universial property is an older technology.
+The Google Analytics 4 Property should be used instead.**
+
+See the previous section for newer versions of Material theme.
+The following is older syntax.
+
 Enabling Google Analytics is useful for tracking page hits.
 However, ad blockers may disable Google Analytics, and therefore tracking data will be less than 100% of actual.
 The MkDocs Material theme supports Google Analytics integration (see the
