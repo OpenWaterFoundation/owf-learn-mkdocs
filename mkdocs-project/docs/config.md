@@ -2,8 +2,8 @@
 
 A MkDocs website is configured using a `mkdocs.yml` configuration file in the main folder.
 
-* [MkDocs Configuration File](#mkdocs-configuration-file)
-* [Theme Configuration Settings](#theme-configuration-settings)
+*   [MkDocs Configuration File](#mkdocs-configuration-file)
+*   [Theme Configuration Settings](#theme-configuration-settings)
 
 -------------------
 
@@ -24,4 +24,4 @@ refer to the configuration settings for the theme that is chosen for the documen
 These settings will override the more general MkDocs configuration settings.
 For example, see:
 
-* [Configuring Material Theme](material-theme.md#configuring-material-theme)
+*   [Configuring Material Theme](material-theme.md#configuring-material-theme)

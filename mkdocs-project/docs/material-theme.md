@@ -2,15 +2,15 @@
 
 This documentation uses the Material theme with MkDocs.  See
 
-* [Material Theme website](https://squidfunk.github.io/mkdocs-material/)
+*   [Material Theme website](https://squidfunk.github.io/mkdocs-material/)
 
 The following provide guidance for using the Material theme:
 
-* [Installing Material Theme](#istalling-material-theme)
-* [Specifying Material Theme](#specifying-material-theme)
-* [Configuring Material Theme](#configuring-material-theme)
-    + [Specifying the Favicon](#specifying-the-favicon)
-    + [Enabling Google Analytics](#enabling-google-analytics)
+*   [Installing Material Theme](#istalling-material-theme)
+*   [Specifying Material Theme](#specifying-material-theme)
+*   [Configuring Material Theme](#configuring-material-theme)
+    +   [Specifying the Favicon](#specifying-the-favicon)
+    +   [Enabling Google Analytics](#enabling-google-analytics)
 
 -----------------
 
@@ -43,12 +43,12 @@ However, the Material theme has its own
 
 To specify a favicon:
 
-1. Create a `favicon.ico` file.  Any filename can be used (does not need to be `favicon`).
-   MkDocs will configure the main `index.html` page to use the favicon and may rename the file.
-   Favicon files can be `.ico` or `.png` format.
-   For example use Gimp software to create a 32x32 pixel image and save with an `ico` file extension.
-2. Save the file in a folder under `docs`, for example `docs/img` or `docs/images` in the MkDocs project folder.
-3. Specify configuration information in the `mkdocs.yml` file, similar to the following:
+1.  Create a `favicon.ico` file.  Any filename can be used (does not need to be `favicon`).
+    MkDocs will configure the main `index.html` page to use the favicon and may rename the file.
+    Favicon files can be `.ico` or `.png` format.
+    For example use Gimp software to create a 32x32 pixel image and save with an `ico` file extension.
+2.  Save the file in a folder under `docs`, for example `docs/img` or `docs/images` in the MkDocs project folder.
+3.  Specify configuration information in the `mkdocs.yml` file, similar to the following:
 
 ```
 theme:
@@ -66,7 +66,7 @@ Google Analytics can be enabled for a MkDocs site to track visits to each page.
 
 A Google Analytics 4 property can be configured using the Material theme configuration properties. See:
 
-* [Setting up site analytics](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/)
+*   [Setting up site analytics](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/)
 
 The MkDocs configuration properties are similar to the following:
 

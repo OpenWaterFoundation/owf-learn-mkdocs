@@ -12,3 +12,12 @@ article ul ul {
 article ul ul ul {
 	list-style-type:  square !important;
 }
+
+/*
+ * Older Material theme used dark grey background with bold white text for table heading.
+ * Newer Material uses white background with bold black text, but the heading does not stand out well.
+ * Instead, set the background to a light gray, which works OK.
+*/
+thead th {
+	background-color: #cccccc;
+}

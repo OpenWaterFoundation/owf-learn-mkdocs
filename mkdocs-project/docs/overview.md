@@ -21,18 +21,18 @@ The documentation that you are reading was prepared using MkDocs.
 
 The Open Water Foundation recommends using MkDocs for the following purposes:
 
-* ***Software developer documentation*** - explain how to set up and use the development environment
-* ***Software user documentation*** - provide navigable documentation with screen shots and examples
-* ***Project documentation*** - use navigable website rather than PDF documents so that project content can more easily be a living document
-* ***Process documentation*** - use navigable website to facilitate understanding process steps at summary and detailed level
+*   ***Software developer documentation*** - explain how to set up and use the development environment
+*   ***Software user documentation*** - provide navigable documentation with screen shots and examples
+*   ***Project documentation*** - use navigable website rather than PDF documents so that project content can more easily be a living document
+*   ***Process documentation*** - use navigable website to facilitate understanding process steps at summary and detailed level
 
 ## Alternatives to MkDocs
 
 Alternatives to MkDocs should be considered where MkDocs does not satisfy requirements.
 Alternatives to MkDocs includes:
 
-* [Sphinx](https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)), which uses reStructuredText source files rather than Markdown.
-* GitHub pages or other cloud-hosted content that is integrated with version control.
+*   [Sphinx](https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)), which uses reStructuredText source files rather than Markdown.
+*   GitHub pages or other cloud-hosted content that is integrated with version control.
 
 
 ## Next Steps

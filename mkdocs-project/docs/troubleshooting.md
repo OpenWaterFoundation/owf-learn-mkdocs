@@ -1,13 +1,15 @@
-# MkDocs / Troubleshooting Markdown #
+# MkDocs / Troubleshooting #
 
 This documentation provides information to troubleshoot Markdown.
 
-* [Introduction](#introduction)
-* [Markdown Problems](#markdown-problems)
-    + [Link - Source Markdown is shown instead of the link](#link-source-markdown-is-shown-instead-of-the-link)
-    + [List - Levels use the same symbol](#list-levels-use-the-same-symbol)
-    + [List - Numbers restart](#list-numbers-restart)
-    + [Table - Source Markdown is shown instead of the formatted table](#table-source-markdown-is-shown-instead-of-the-formatted-table)
+*   [Introduction](#introduction)
+*   [Troubleshooting a Hosted Web Site](#troubleshooting-a-hosted-web-site)
+    +   [Web page does not show updates after uploading files](#web-page-does-not-show-updates-after-uploading-files)
+*   [Troubleshooting Markdown](#troubleshooting-markdown)
+    +   [Link - Source Markdown is shown instead of the link](#link-source-markdown-is-shown-instead-of-the-link)
+    +   [List - Levels use the same symbol](#list-levels-use-the-same-symbol)
+    +   [List - Numbers restart](#list-numbers-restart)
+    +   [Table - Source Markdown is shown instead of the formatted table](#table-source-markdown-is-shown-instead-of-the-formatted-table)
 
 -----------------
 
@@ -22,6 +24,23 @@ and the various Markdown "flavors" (such as GitHub-flavored Markdown) and plugin
 This documentation provides troubleshooting recommendations for common issues,
 in particular those experienced when using MkDocs.
 See also the [Edit](edit.md) documentation for tips on editing Markdown content.
+
+## Troubleshooting a Hosted Web Site ##
+
+A website created with MkDocs is typically uploaded to the cloud to be hosted as a static website,
+for example using Amazon S3 and CloudFront.
+The following are common web site issues.
+
+### Web page does not show updates after uploading files ###
+
+Uploading a website to the cloud may not show the updated content when viewed in a web browser,
+even after refreshing the page.  The following are possible solutions:
+
+1.  Make sure that the content is updated in the server's cache.
+    For example, if using Amazon Web Services S3 and CloudFront,
+    make sure that the files are invalidated in the CloudFront distribution.
+2.  It may be necessary to do a hard refresh in the web browser using ***Ctrl F5***,
+    in particular to refresh CSS files such as the custom MkDocs CSS file.
 
 ## Markdown Problems ##
 

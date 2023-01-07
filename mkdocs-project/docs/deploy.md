@@ -8,9 +8,9 @@ Once the files are created, they can be deployed to a location where a web serve
 By convention, using a top-level page named `index.html` ensures that the site can be accessed using
 either a URL to the `index.html` file, or the folder containing that file.
 
-* [Deploy to Amazon S3](#deploy-to-amazon-s3)
-* [Deploy Website to Google Cloud Platform](#deploy-website-to-google-cloud-platform)
-* [Deploy to WordPress](#deploy-to-wordpress)
+*   [Deploy to Amazon S3](#deploy-to-amazon-s3)
+*   [Deploy Website to Google Cloud Platform](#deploy-website-to-google-cloud-platform)
+*   [Deploy to WordPress](#deploy-to-wordpress)
 
 ------------------------
 
@@ -38,16 +38,16 @@ See also [OWF / Learn Amazon Web Services](http://learn.openwaterfoundation.org/
 
 The `copy-to-owf-amazon-s3.sh` script does the following:
 
-* The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
-* The `site` folder is renamed to `owf-learn-mkdocs` during the upload to S3 bucket.
-* The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
-  See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
+*   The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
+*   The `site` folder is renamed to `owf-learn-mkdocs` during the upload to S3 bucket.
+*   The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
+    See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
 
 Using such a script allows the following:
 
-* run the script from any folder
-* check the version of MkDocs
-* automate processing, for example if part of a build process
+*   run the script from any folder
+*   check the version of MkDocs
+*   automate processing, for example if part of a build process
 
 ## Deploy Website to Google Cloud Platform ##
 
