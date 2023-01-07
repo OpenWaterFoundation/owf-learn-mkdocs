@@ -5,25 +5,30 @@ Each markdown file that is created should be included in the `mkdocs.yml` config
 software can process from Markdown into final form.
 The remainder of this page contains the following sections:
 
-* [Markdown Introduction](#markdown-introduction)
-* [Markdown Text Editors](#markdown-text-editors)
-* [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of website
-    + [Custom CSS Configuration](#custom-css-configuration)
+*   [Markdown Introduction](#markdown-introduction)
+*   [Markdown Text Editors](#markdown-text-editors)
+*   [Selecting a Theme](#selecting-a-theme) - used to customize look and feel of MkDocs website
+    +   [Custom CSS Configuration](#custom-css-configuration) - control HTML element formatting
 * [Starting Local Web Server to Review Content](#starting-local-web-server-to-review-content) - shows website in browser
-    + [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
-* [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
-* [Selecting Markdown Documentation Styles](#selecting-markdown-documentation-styles) - conventions within the pages
-* [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
-    + [Image - Center image and caption with link to full-size image](#image-center-image-and-caption-with-link-to-view-full-size-image)
-    + [Link - Link to  a Markdown file in the same or different folder](#link-link-to-a-markdown-file-in-the-same-or-different-folder)
-    + [Link - Link to a heading in Markdown file](#link-link-to-a-heading-in-markdown-file)
-    + [Link - Link to a named location that is not a section heading](#link-link-to-a-named-location-that-is-not-a-section-heading)
-    + [List - Ensuring incremental numbers](#list-ensuring-incremental-numbers)
-    + [Table - Controlling width of table columns](#table-controlling-width-of-table-columns) - helpful when defaults are not working well
-    + [Table - Center table and caption](#table-center-table-and-caption)
-    + [Text - Format for readability and version control](#text-format-for-readability-and-version-control)
-    + [Text - Showing Markdown as literal text](#text-showing-markdown-as-literal-text) - used to show how to use Markdown
-    + [Text - Include language indicator for more specific formatting](#text-include-language-indicator-for-more-specific-formatting)
+    +   [Stopping MkDocs Web Server](#stopping-mkdocs-web-server)
+*   [Selecting File Naming Convention](#selecting-file-naming-convention) - conventions to organize files
+*   [Selecting Markdown Documentation Styles](#selecting-markdown-documentation-styles) - conventions within the pages
+*   [MkDocs Markdown Examples](#mkdocs-markdown-examples) - useful examples and tips
+    +   [Image](#image):
+        -   [Image - Center image and caption with link to full-size image](#image-center-image-and-caption-with-link-to-view-full-size-image)
+    +   [Link](#link):
+        -   [Link - Link to  a Markdown file in the same or different folder](#link-link-to-a-markdown-file-in-the-same-or-different-folder)
+        -   [Link - Link to a heading in Markdown file](#link-link-to-a-heading-in-markdown-file)
+        -   [Link - Link to a named location that is not a section heading](#link-link-to-a-named-location-that-is-not-a-section-heading)
+    +   [List](#list):
+        -   [List - Ensuring incremental numbers](#list-ensuring-incremental-numbers)
+    +   [Table](#table):
+        -   [Table - Controlling width of table columns](#table-controlling-width-of-table-columns) - helpful when defaults are not working well
+        -   [Table - Center table and caption](#table-center-table-and-caption)
+    +   [Text](#text):
+        -   [Text - Format for readability and version control](#text-format-for-readability-and-version-control)
+        -   [Text - Showing Markdown as literal text](#text-showing-markdown-as-literal-text) - used to show how to use Markdown
+        -   [Text - Include language indicator for more specific formatting](#text-include-language-indicator-for-more-specific-formatting)
 
 -----------------
 
@@ -38,9 +43,9 @@ Note that GitHub will render the Markdown in formatted form.  To view the source
 click on the `.md` file of interest and use the ***Raw*** button.
 The following are references for Markdown:
 
-* [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
-* [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
-* [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+*   [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
+*   [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
+*   [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Markdown Text Editors ##
 
@@ -53,8 +58,8 @@ However, a Markdown editor is still useful for README.md files that are used in 
 
 The following are text editors that provide Markdown viewing features:
 
-* [Visual Studio Code](https://code.visualstudio.com/) - use ***Ctrl-Shift-v*** to display the Markdown viewer
-* [Atom](https://atom.io/) - use ***Ctrl-Shift-m*** to display the Markdown viewer
+*   [Visual Studio Code](https://code.visualstudio.com/) - use ***Ctrl-Shift-v*** to display the Markdown viewer
+*   [Atom](https://atom.io/) - use ***Ctrl-Shift-m*** to display the Markdown viewer
 
 ## Selecting a Theme ##
 
@@ -72,14 +77,14 @@ Changing the theme involves installing the theme files and changing the configur
 
 Experience has shown the following:
 
-* The default themes shipped with MkDocs (`readthedocs` and `mkdocs`) are generally adequate but have limitations,
-  especially for larger sites.
-  In particular, the navigation features are limited.
-* Sites having many documents can cause the left navigation bar to get very long, for example in `readthedocs` theme.
-* A menu-based theme with many menus at the top of the page can cause the page header to overflow and overwrite the top of pages.
-  It is necessary in this case to limit the number of menus or words in menus in order to fit the maximum page width.
-* Some themes provide search features and some do not.  If a search feature is desirable then make sure to
-  confirm that the theme includes this functionality.
+*   The default themes shipped with MkDocs (`readthedocs` and `mkdocs`) are generally adequate but have limitations,
+    especially for larger sites.
+    In particular, the navigation features are limited.
+*   Sites having many documents can cause the left navigation bar to get very long, for example in `readthedocs` theme.
+*   A menu-based theme with many menus at the top of the page can cause the page header to overflow and overwrite the top of pages.
+    It is necessary in this case to limit the number of menus or words in menus in order to fit the maximum page width.
+*   Some themes provide search features and some do not.  If a search feature is desirable then make sure to
+    confirm that the theme includes this functionality.
 
 Overcoming these issues requires experimenting with themes and perhaps adding custom CSS configuration.
 It may also be desirable to customize the branding of documentation, which involves adding favicon and editing the CSS.
@@ -107,7 +112,7 @@ extra_css:
   - 'css/extra-material-theme.css'
 ```
 
-The following custom CDSS configuration ensures that multiple levels of bulleted lists appear correctly
+The following custom CSS configuration ensures that multiple levels of bulleted lists appear correctly
 (default behavior is to use solid dots for all levels):
 
 ```
@@ -125,6 +130,15 @@ article ul ul {
 article ul ul ul {
         list-style-type:  square !important;
 }
+
+/*
+ * Older Material theme used dark grey background with bold white text for table heading.
+ * Newer Material uses white background with bold black text, but the heading does not stand out well.
+ * Instead, set the background to a light gray, which works OK.
+*/
+thead th {
+        background-color: #cccccc;
+}
 ```
 
 ## Starting Local Web Server to Review Content ##
@@ -132,8 +146,8 @@ article ul ul ul {
 The MkDocs software converts the Markdown files into a static website that uses HTML, CSS, JavaScript, images, and other files.
 The conversion of Markdown files to static website content takes place in two ways:
 
-1. In memory when a local MkDocs web server is run  with `mkdocs serve` (no output files are generated in the `site` folder).
-2. As files in the `site` folder when `mkdocs build` is run.
+1.  In memory when a local MkDocs web server is run  with `mkdocs serve` (no output files are generated in the `site` folder).
+2.  As files in the `site` folder when `mkdocs build` is run.
 
 During normal editing, a text editor is used to edit the Markdown files.
 Once a file is saved, the content can be viewed in a browser using a local web server provided by MkDocs.
@@ -161,11 +175,11 @@ A similar script can be used to run on a specific port,
 which is useful when multiple servers need to be run at the same time.
 The following can be dealt with in such a script:
 
-* Make sure that the script can be run from any folder and still work.
-* Find an appropriate Python to run `mkdocs` - can specify the `mkdocs` module to run,
-  no need to run a script.
-* Confirm that the correct version of MkDocs is run for MkDocs files (e.g., require MkDocs 1+).
-* Potentially, make adjustments to the content programmatically.
+*   Make sure that the script can be run from any folder and still work.
+*   Find an appropriate Python to run `mkdocs` - can specify the `mkdocs` module to run,
+    no need to run a script.
+*   Confirm that the correct version of MkDocs is run for MkDocs files (e.g., require MkDocs 1+).
+*   Potentially, make adjustments to the content programmatically.
 
 ### Stopping MkDocs Web Server ###
 
@@ -176,9 +190,9 @@ To stop the MkDocs web server, enter `Ctrl-C` in the command shell.  Only one Mk
 The Markdown files should follow a naming convention that facilitates maintaining the content,
 for example:
 
-* Use consistent convention such as all lowercase with dashes separating words, for example `deploy-website` (folder)
-  and `deploy-website.md` (Markdown file).
-* If images are used, create a folder such as `images` for imaged in a content folder.
+*   Use consistent convention such as all lowercase with dashes separating words, for example `deploy-website` (folder)
+    and `deploy-website.md` (Markdown file).
+*   If images are used, create a folder such as `images` for imaged in a content folder.
 
 It is possible that other documentation will link to a page so some care should be taken not to frequently change filenames.
 
@@ -191,9 +205,9 @@ It is possible to customize the MkDocs theme that is used to control such styles
 Another styling approach is to decide how to use basic Markdown to format documentation.
 For example, the following may be selected as a convention for styling:
 
-* Indicate all user input with triple-backticks using appropriate content type.
-* Indicate all inline text program names with surrounding single-backticks.
-* Use italic bold (three surrounding asterisks) for software labels/features such as buttons to click.
+*   Indicate all user input with triple-backticks using appropriate content type.
+*   Indicate all inline text program names with surrounding single-backticks.
+*   Use italic bold (three surrounding asterisks) for software labels/features such as buttons to click.
 
 Other choices can be made to ensure consistency in the documentation.
 
@@ -202,7 +216,9 @@ Other choices can be made to ensure consistency in the documentation.
 The following are useful examples and tips determined through use of MkDocs.
 The content is grouped according to the element type.
 
-### Image - Center image and caption with link to view full-size image ###
+### Image ###
+
+#### Image - Center image and caption with link to view full-size image ####
 
 MkDocs by default left-justifies images and text.
 MkDocs also sizes images to fit within the width of the formatted page.
@@ -231,13 +247,15 @@ Example Image (<a href="../images/OWF-Logo-Color.png">see full-size image</a>)
 
 Technical notes:
 
-* It is also possible to add custom CSS to handle formatting,
-  but care must be taken to not interfere with other CSS properties.
-* The `**` around the image is necessary and if removed will result in no image.
-  Such formatting tricks may need to be evaluated for specific themes.
-* `../` must be used when linking to the full-size image, necessary due to how the final HTML is constructed.
+*   It is also possible to add custom CSS to handle formatting,
+    but care must be taken to not interfere with other CSS properties.
+*   The `**` around the image is necessary and if removed will result in no image.
+    Such formatting tricks may need to be evaluated for specific themes.
+*   `../` must be used when linking to the full-size image, necessary due to how the final HTML is constructed.
 
-### Link - Link to a Markdown file in the same or different folder ###
+### Link ###
+
+#### Link - Link to a Markdown file in the same or different folder ####
 
 A Markdown file can be linked to in the same folder by using the link notation.
 The name of the markdown file with `.md` is specified in parentheses.
@@ -256,16 +274,16 @@ If the file exists in a different folder, specify a leading path:
 [text for visible link](../some-folder/other-markdown-file.md)
 ```
 
-### Link - Link to a heading in Markdown file ###
+#### Link - Link to a heading in Markdown file ####
 
 Use the following syntax to link to a heading in a separate file, where the words in parenthesis match the
 `#` heading.  This is useful for creating internal table of contents to help with navigation.
 The following are rules for specifying the reference location in parentheses:
 
-* Start the location name with a `#`.
-* Replace spaces by dash.
-* Remove periods and some other special characters as necessary to make the link work.
-* Use all lowercase in the location name.
+*   Start the location name with a `#`.
+*   Replace spaces by dash.
+*   Remove periods and some other special characters as necessary to make the link work.
+*   Use all lowercase in the location name.
 
 ```text
 [text for visible link](../parallel-folder/other-markdown-file.md#heading-words)
@@ -274,7 +292,7 @@ The following are rules for specifying the reference location in parentheses:
 
 If the link is to a location in the current file, omit the leading filename and start the reference with `#`.
 
-### Link - Link to a named location that is not a section heading ###
+#### Link - Link to a named location that is not a section heading ####
 
 It can be useful to include a link to a point within a Markdown file without referring to a heading.
 To do so, add the following to create a named location:
@@ -289,7 +307,9 @@ Then add a link to the named location similar to the following:
 Press "back" in the browser to return to the list of setup steps or [click here](#step1)`
 ```
 
-### List - Ensuring incremental numbers ###
+### List ###
+
+#### List - Ensuring incremental numbers ####
 
 Complicated lists may result in numbers resetting rather than continuing in a sequence.
 This can be particularly challenging when list levels include images and code blocks.
@@ -298,7 +318,7 @@ which is helpful when lists are long and it is a chore to renumber based on a ch
 However, this lazy approach can result in problems.
 The following are suggestions that may help.
 
-#### Make sure to indent intervening content ####
+##### Make sure to indent intervening content #####
 
 A list with intervening content at a lesser indent rests numbering.
 For example:
@@ -397,7 +417,9 @@ Result (note sequential numbers):
 
 ---
 
-### Table - Controlling width of table columns ###
+### Table ###
+
+#### Table - Controlling width of table columns ####
 
 Markdown tables in MkDocs sites set table column widths based on the amount of content in each column.
 Wider columns are used for columns with more characters/words.
@@ -409,23 +431,23 @@ Another option is to include the non-breaking space characters in the header of 
 
 | **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
 | -------- | --------- | --------- |
-| --some-option | This is a command parameter | default value | 
+| `--some-option` | This is a command parameter | default value | 
 
 Source:
 
 ```
 | **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
 | -------- | --------- | --------- |
-| --some-option | This is a command parameter | default value | 
+| `--some-option` | This is a command parameter | default value | 
 ```
 
-### Table - Center table and caption ###
+#### Table - Center table and caption ####
 
 A simple table is as follows:
 
 | **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
 | -------- | --------- | --------- |
-| --some-option | This is a command parameter | default value | 
+| `--some-option` | This is a command parameter | default value | 
 
 To center the table and its caption:
 
@@ -434,21 +456,23 @@ To center the table and its caption:
 <div style="text-align: center;">
 | **Parameter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | Default |
 | -------- | --------- | --------- |
-| --some-option | This is a command parameter | default value | 
+| `--some-option` | This is a command parameter | default value | 
 </div>
 
 **<p style="text-align: center;">
 Table Caption
 </p>**
 
-### Text - Format for readability and version control ###
+### Text ###
+
+#### Text - Format for readability and version control ####
 
 Markdown has minimal restrictions on text formatting.
 For example, a paragraph's text can be split across lines or one lone line.
 However, formatting text with some care will result in greater readability and
 easier use with version control, as described below.
 
-#### Indent each line of list content ####
+##### Indent each line of list content #####
 
 Lists use 4 spaces for indentation. 
 The following formatting will work:
@@ -476,7 +500,7 @@ Note that the 4-space indentation accommodates up to 99 levels.
     Second line
 ```
 
-#### Use line breaks to improve granularity of version control ####
+##### Use line breaks to improve granularity of version control #####
 
 If Markdown paragraph text is formatted without line breaks,
 then a change of one character anywhere in the long line will be tracked in a version control system.
@@ -486,7 +510,7 @@ to within a sentence or sub-sentence, which improves the granularity of version 
 A general rule is to keep lines similar to software code, such as 80-120 characters maximum.
 For example, break lines at punctuation, Markdown elements such as links, etc.
 
-### Text - Showing Markdown as literal text ###
+#### Text - Showing Markdown as literal text ####
 
 It is often useful to show examples of Markdown, such as in this documentation.
 To do so, indent the Markdown by 4 spaces, as shown in the following example.
@@ -502,7 +526,7 @@ Alternatively, without the leading spaces the above is rendered as follows:
 $ some-shell-command
 ```
 
-### Text - Include language indicator for more specific formatting ###
+#### Text - Include language indicator for more specific formatting ####
 
 It is useful to automatically format content based on the language for the content.
 For example, the following uses notation <code>```sh</code> to indicate that the content is for a Linux shell script:
@@ -523,5 +547,5 @@ Source Markdown:
 
 The following provides a list of languages supported by Markdown, although support will vary by tool:
 
-* [GitHub Markdown language file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
-* [Languages Supported by Github Flavored Markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/)
+*   [GitHub Markdown language file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+*   [Languages Supported by Github Flavored Markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/)

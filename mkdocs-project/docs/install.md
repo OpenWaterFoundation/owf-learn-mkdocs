@@ -13,9 +13,9 @@ It may be necessary or desirable to use a third-party MkDocs theme to enable an 
 This decision may not be obvious until after content has been added to the documentation.
 The following are links to themes:
 
-* [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-* [Material Theme](http://squidfunk.github.io/mkdocs-material/) - this documentation uses Material theme
-* [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
+*   [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+*   [Material Theme](http://squidfunk.github.io/mkdocs-material/) - this documentation uses Material theme
+*   [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
 
 To use a third-party theme, follow the link for the theme on the above page and follow installation instructions.
 Note that in some cases the theme will already have been installed and `pip` will indicate that update can be used.
@@ -24,10 +24,10 @@ It may be necessary to and restart MkDocs (see [Edit Content section](edit.md)).
 
 The following describes how to install MkDocs:
 
-* ![Cygwin](images/cygwin-32.png) [Install on Cygwin](#install-on-cygwin)
-* ![Linux](images/linux-32.png) [Install on Linux](#install-on-linux)
-* ![Windows](images/windows-32.png) [Install on Windows](#install-on-windows)
-* [Update MkDocs](#update-mkdocs)
+*   ![Cygwin](images/cygwin-32.png) [Install on Cygwin](#install-on-cygwin)
+*   ![Linux](images/linux-32.png) [Install on Linux](#install-on-linux)
+*   ![Windows](images/windows-32.png) [Install on Windows](#install-on-windows)
+*   [Update MkDocs](#update-mkdocs)
 
 -------
 
@@ -194,12 +194,9 @@ which corresponds to `C:\Users\usr\AppData` rather than older `C:\Python27`, etc
 to minimize need for administrator privileges and avoid installing Python packages in a system folder.
 
 Python software for new installations is also accessed using the `py` program.
-The `py.exe` program is installed in `C:\windows` and therefore is always in the `PATH`
-environment variable.
-The `py` program finds Python 2 and 3 versions on the system and by default runs the
-newest installed version.
-This ensures that Python can be run without adding a specific Python installation folder to
-the `PATH`.
+The `py.exe` program is installed in `C:\windows` and therefore is always in the `PATH` environment variable.
+The `py` program finds Python 2 and 3 versions on the system and by default runs the newest installed version.
+This ensures that Python can be run without adding a specific Python installation folder to the `PATH`.
 Of course, installing `py` requires administrative privileges even if the Python
 software itself is installed in user files.
 The benefit of installing Python in user files is that additional packages can be

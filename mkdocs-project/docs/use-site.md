@@ -6,10 +6,10 @@ theme that is used, for example
 
 The remainder of this page contains the following sections:
 
-* [Searching the Site](#searching-the-site)
-* [Printing a Page](#printing-a-page)
-* [Save a Page to a File](#save-a-page-to-a-file)
-* [Share Documentation](#share-documentation)
+*   [Searching the Site](#searching-the-site)
+*   [Printing a Page](#printing-a-page)
+*   [Save a Page to a File](#save-a-page-to-a-file)
+*   [Share Documentation](#share-documentation)
 
 -----------------
 
@@ -37,10 +37,10 @@ The following sections describe how to save the file using common browsers.
 
 ### Chrome Browser ###
 
-1. Print the file using the ***Print*** menu or `Ctrl-P`.
-2. Select ***Change...*** to change the printer.
-3. Select ***Save as PDF*** from the printer names.
-4. Prese the ***Save*** button and enter a filename for the PDF.
+1.  Print the file using the ***Print*** menu or `Ctrl-P`.
+2.  Select ***Change...*** to change the printer.
+3.  Select ***Save as PDF*** from the printer names.
+4.  Press the ***Save*** button and enter a filename for the PDF.
 
 ## Share Documentation ##
 

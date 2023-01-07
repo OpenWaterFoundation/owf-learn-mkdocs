@@ -15,18 +15,18 @@ nav:
 - Material Theme:  material-theme.md
 - Deploy Website: deploy.md
 - Use Site: use-site.md
-- Troubleshooting Markdown: troubleshooting.md
+- Troubleshooting: troubleshooting.md
 - Resources: resources.md
 # ------- configuration properties ---------------
 # Alphabetize
 # ------------------------------------------------
-copyright:  Copyright 2017-2022, Open Water Foundation
+copyright:  Copyright Open Water Foundation
 # ------------------------------------------------
-# Use extra CSS to customize styles, based on theme
+# Use extra CSS to customize styles, based on theme.
 extra_css:
   - 'css/extra-material-theme.css'
 # ------------------------------------------------
-# Google Analytics
+# Google Analytics:
 # - see:  https://squidfunk.github.io/mkdocs-material/getting-started/#google-analytics
 extra:
   analytics:
@@ -45,13 +45,13 @@ extra:
 site_author:  Open Water Foundation
 site_description:  Open Water Foundation Learn MkDocs
 # ------------------------------------------------
-# Use Material theme
+# Use Material theme:
 # - installation notes:  https://github.com/squidfunk/mkdocs-material
 theme:
   name: 'material'
   favicon: 'images/OWF-Logo-Favicon-32x32.ico'
 # ------------------------------------------------
-# The following controls how URLs are created
+# The following controls how URLs are created:
 # - As of MkDocs 1.0 the default is true meaning URLs to a page ABC is ABC/ rather than something/ABC.html.
 # - see:  https://www.mkdocs.org/user-guide/configuration/#use_directory_urls
 # use_directory_urls: true
