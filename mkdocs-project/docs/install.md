@@ -1,5 +1,18 @@
 # MkDocs / Install MkDocs
 
+This documentation explains how to install and update MkDocs and MkDocs themes.
+
+*   [Introduction](#introduction)
+*   [Install on Cygwin](#install-on-cygwin)
+*   [Install on Linux](#install-on-linux)
+*   [Install on Windows](#install-on-windows)
+*   [Update MkDocs](#update-mkdocs)
+*   [Update MkDocs Theme](#update-mkdocs-theme)
+
+---------
+
+## Introduction ##
+
 MkDocs installation steps are described on the [MkDocs website](http://www.mkdocs.org/) and are summarized below
 to verify that the steps work on different operating systems.
 
@@ -185,7 +198,8 @@ $ sudo pip3 install mkdocs-material
 
 ## ![Windows](images/windows-32.png) Install on Windows ##
 
-The following instructions describe how to install MkDocs on Windows 7 & 10.
+The following instructions describe how to install MkDocs on Microsoft Windows.
+A windows installation can also be used in some other environments such as Git Bash (used for software development).
 The following focuses on Python 3.
 
 Note that the Python installation for Windows has changed over time.
@@ -307,10 +321,26 @@ To install, use a command similar to the following:
 
 [MkDocs release notes](http://www.mkdocs.org/about/release-notes/) can be consulted to determine whether to update MkDocs.
 
-New versions of MkDocs software can be installed by running the following, or a variation, as per operating system:
+New versions of MkDocs software can be installed by running the following, or a variation,
+which should work on any operating system.
 
 ```sh
 $ pip install --upgrade mkdocs
+```
+
+The following example is for Windows and updates MkDocs in the most recent version of Python.
+In this case, `pip` is run as a module from a specific Python version.
+
+```sh
+$ py -m pip install --upgrade mkdocs
+```
+
+## Update MkDocs Theme ##
+
+To update the material theme on Windows, use a command similar to:
+
+```sh
+$ py -m pip install --upgrade mkdocs-material
 ```
 
 ## Next Steps ##
