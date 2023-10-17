@@ -4,17 +4,17 @@ The following are useful resources.
 
 ## MkDocs ##
 
-*   [MkDocs website](http://www.mkdocs.org/)
-    +   [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/) - explains file organization, formatting, document links
+*   [MkDocs website](https://www.mkdocs.org/)
+    +   [Writing your docs](https://www.mkdocs.org/user-guide/writing-your-docs/) - explains file organization, formatting, document links
 
 ## MkDocs Themes ##
 
-*   [Material](http://squidfunk.github.io/mkdocs-material/)
-    +   [Getting Started](http://squidfunk.github.io/mkdocs-material/getting-started/) - also contains useful MkDocs general information
+*   [Material](https://squidfunk.github.io/mkdocs-material/)
+    +   [Getting Started](https://squidfunk.github.io/mkdocs-material/getting-started/) - also contains useful MkDocs general information
     +   [Material Design](https://material.io) - user interface components that go beyond MkDocs
     +   [Material icons](https://material.io/icons/) - modern and clean icons
 *   [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-*   [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
+*   [MkDocs Bootswatch Project Themes on GitHub](https://mkdocs.github.io/mkdocs-bootswatch/)
 
 ## Markdown ##
 

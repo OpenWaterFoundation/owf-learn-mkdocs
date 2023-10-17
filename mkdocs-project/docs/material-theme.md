@@ -39,7 +39,7 @@ Below are some specific configuration topics that may be useful.
 A favicon icon is the image used for the browser tab when the documentation is loaded.
 Mkdocs provides general guidance for specifying a favicon.
 However, the Material theme has its own
-[favicon configuration approach described here](https://squidfunk.github.io/mkdocs-material/getting-started/#favicon).
+[favicon configuration approach described here](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/).
 
 To specify a favicon:
 

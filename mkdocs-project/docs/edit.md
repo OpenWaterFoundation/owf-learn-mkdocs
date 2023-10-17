@@ -43,7 +43,7 @@ Note that GitHub will render the Markdown in formatted form.  To view the source
 click on the `.md` file of interest and use the ***Raw*** button.
 The following are references for Markdown:
 
-*   [Writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
+*   [Writing your docs](https://www.mkdocs.org/user-guide/writing-your-docs/)
 *   [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
 *   [Adam Prichard's Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
@@ -60,6 +60,7 @@ The following are text editors that provide Markdown viewing features:
 
 *   [Visual Studio Code](https://code.visualstudio.com/) - use ***Ctrl-Shift-v*** to display the Markdown viewer
 *   [Atom](https://atom.io/) - use ***Ctrl-Shift-m*** to display the Markdown viewer
+    (has been retired in favor of Visual Studio Code)
 
 ## Selecting a Theme ##
 
