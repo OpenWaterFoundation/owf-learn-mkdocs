@@ -6,7 +6,6 @@ site_name: Learn / MkDocs
 nav:
 - Home: index.md
 - Overview: overview.md
-#- Install MkDocs: install.md
 - Install MkDocs: install.md
 - MkDocs Version Differences: mkdocs-versions.md
 - New Project: new-project.md

@@ -17,7 +17,7 @@ either a URL to the `index.html` file, or the folder containing that file.
 ## Deploy to Amazon S3 ##
 
 One way to serve the static website files is to copy the files to an
-[Amazon S3 static website bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
+[Amazon S3 static website bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
 or other static hosting solution.
 
 The [`copy-to-owf-amazon-s3.sh`](https://github.com/OpenWaterFoundation/owf-learn-mkdocs/blob/master/build-util/copy-to-owf-amazon-s3.sh)
@@ -34,14 +34,14 @@ To control the `awscli` installation, use a command like `py -m pip install awsc
 which will use the pip corresponding to latest Python.
 Similar commands can be used to install for a specific version of Python,
 for example `py -3.7 -m pip install awscli` or similar.
-See also [OWF / Learn Amazon Web Services](http://learn.openwaterfoundation.org/owf-learn-aws/).
+See also [OWF / Learn Amazon Web Services](https://learn.openwaterfoundation.org/owf-learn-aws/).
 
 The `copy-to-owf-amazon-s3.sh` script does the following:
 
 *   The `mkdocs build` command is run first to ensure that the `site` folder contains current website files.
 *   The `site` folder is renamed to `owf-learn-mkdocs` during the upload to S3 bucket.
 *   The default `index.html` file is used as the main page for the deployed site, as per normal website conventions.
-    See the [deployed website](http://learn.openwaterfoundation.org/owf-learn-mkdocs/).
+    See the [deployed website](https://learn.openwaterfoundation.org/owf-learn-mkdocs/).
 
 Using such a script allows the following:
 
@@ -53,7 +53,7 @@ Using such a script allows the following:
 
 A similar approach can be taken to deploy to Google Cloud Platform.
 For example see the
-[TSTool OpenCDSS](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/blob/master/build-util/copy-to-co-dnr-gcp.sh)
+[TSTool OpenCDSS](https://github.com/OpenCDSS/cdss-app-tstool-doc-user/blob/master/build-util/copy-to-co-dnr-gcp.bash)
 script.
 
 ## Deploy to WordPress ##

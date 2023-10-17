@@ -1,4 +1,4 @@
-# MkDocs / Overview
+# MkDocs / Overview #
 
 There is often a need to create an integrated static website to organize documentation or other content
 and provide navigation between resources.
@@ -16,7 +16,7 @@ This approach works well for many documents that benefit from navigation and web
 
 MkDocs software is free and open source and only requires that Python is installed while editing the documentation
 (Python is not needed to view the website when deployed to the cloud).
-See the [MkDocs documentation](http://www.mkdocs.org/).
+See the [MkDocs documentation](https://www.mkdocs.org/).
 The documentation that you are reading was prepared using MkDocs.
 
 The Open Water Foundation recommends using MkDocs for the following purposes:

@@ -47,7 +47,7 @@ The MkDocs "project" consists of the following:
     used in the repository for this documentation.
 
 The MkDocs documentation is straightforward and provides examples of the `mkdocs.yml` configuration file.
-See [Writing your docs in the MkDocs documentation](http://www.mkdocs.org/user-guide/writing-your-docs/).
+See [Writing your docs in the MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/).
 
 ## MkDocs Project Conventions for Git Repository ##
 

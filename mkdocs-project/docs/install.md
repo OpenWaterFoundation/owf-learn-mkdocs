@@ -13,7 +13,7 @@ This documentation explains how to install and update MkDocs and MkDocs themes.
 
 ## Introduction ##
 
-MkDocs installation steps are described on the [MkDocs website](http://www.mkdocs.org/) and are summarized below
+MkDocs installation steps are described on the [MkDocs website](https://www.mkdocs.org/) and are summarized below
 to verify that the steps work on different operating systems.
 
 MkDocs requires Python.
@@ -27,8 +27,8 @@ This decision may not be obvious until after content has been added to the docum
 The following are links to themes:
 
 *   [MkDocs Themes on GitHub](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-*   [Material Theme](http://squidfunk.github.io/mkdocs-material/) - this documentation uses Material theme
-*   [MkDocs Bootswatch Project Themes on GitHub](http://mkdocs.github.io/mkdocs-bootswatch/)
+*   [Material Theme](https://squidfunk.github.io/mkdocs-material/) - this documentation uses Material theme
+*   [MkDocs Bootswatch Project Themes on GitHub](https://mkdocs.github.io/mkdocs-bootswatch/)
 
 To use a third-party theme, follow the link for the theme on the above page and follow installation instructions.
 Note that in some cases the theme will already have been installed and `pip` will indicate that update can be used.
@@ -89,7 +89,7 @@ However, if it is desired to use Python and `pip` on Cygwin, confirm the install
 
 If `pip` is not installed for `python3`, install it.
 Even though pip should already be included with `python3` on Cygwin, it may not actually have been installed
-(see [Stack Overflow article "Installing new versions of Pytnon on Cygwin does not install Pip?"](http://stackoverflow.com/questions/30863501/installing-new-versions-of-python-on-cygwin-does-not-install-pip)).
+(see [Stack Overflow article "Installing new versions of Pytnon on Cygwin does not install Pip?"](https://stackoverflow.com/questions/30863501/installing-new-versions-of-python-on-cygwin-does-not-install-pip)).
 Following the instructions from the above link to install pip on Cygwin:
 
 ```sh
@@ -319,7 +319,7 @@ To install, use a command similar to the following:
 
 ## Update MkDocs ##
 
-[MkDocs release notes](http://www.mkdocs.org/about/release-notes/) can be consulted to determine whether to update MkDocs.
+[MkDocs release notes](https://www.mkdocs.org/about/release-notes/) can be consulted to determine whether to update MkDocs.
 
 New versions of MkDocs software can be installed by running the following, or a variation,
 which should work on any operating system.
